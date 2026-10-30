@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Planes & Abonos | Ruco (ruco.ar)</title>
+  <meta name="description" content="Planes de diseño web y abono mensual de mantenimiento transparente para comercios y profesionales en Argentina. Sin costos ocultos.">
+  <meta name="author" content="Ruco (ruco.ar)">
+  <meta name="theme-color" content="#F8F4EE">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ruco.ar/planes.html">
+  <meta property="og:title" content="Planes & Abonos Transparentes | Ruco">
+  <meta property="og:description" content="Desarrollo inicial llave en mano y abono mensual accesible que cubre dominio, hosting y actualizaciones.">
+  <meta property="og:image" content="assets/logo/rucoweb-avatar.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/logo/rucoweb-avatar.jpg">
+
+  <!-- Tipografía: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos Mobile First -->
+  <link rel="stylesheet" href="css/styles.css?v=3.0">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       BARRA DE NAVEGACIÓN FIJA CON LOGO ANCLADO
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand-link" aria-label="Ruco - Volver a Inicio">
+        <div class="brand-avatar-wrap">
+          <img src="assets/logo/rucoweb-avatar.jpg" alt="Ruco Logo" class="brand-avatar-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">ruco<span class="brand-ext">.ar</span></span>
+          <span class="brand-tagline">Diseño Web Moderno</span>
+        </div>
+      </a>
+
+      <!-- Menú Escritorio -->
+      <nav class="nav-links" aria-label="Menú principal">
+        <a href="index.html#inicio" class="nav-link">Inicio</a>
+        <a href="index.html#clientes" class="nav-link">Nuestros Clientes</a>
+        <a href="index.html#comparativa" class="nav-link">¿Por qué una web?</a>
+        <a href="planes.html" class="nav-link active">Planes & Abonos</a>
+        <a href="index.html#faq" class="nav-link">Preguntas</a>
+      </nav>
+
+      <!-- Botón Hamburguesa -->
+      <div class="nav-actions">
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menú Drawer Desplegable -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="assets/logo/rucoweb-avatar.jpg" alt="Ruco Logo" style="width:36px; height:36px; border-radius:50%;">
+        <span style="font-weight: 800; font-size: 1.15rem; color: var(--text-pine);">ruco.ar</span>
+      </div>
+      <button class="drawer-close" id="drawerClose" aria-label="Cerrar menú">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <div class="drawer-links">
+      <a href="index.html#inicio" class="drawer-link">Inicio</a>
+      <a href="index.html#clientes" class="drawer-link">Nuestros Clientes</a>
+      <a href="index.html#comparativa" class="drawer-link">Instagram vs. Web</a>
+      <a href="planes.html" class="drawer-link" style="color: var(--copper-primary);">Planes & Abonos</a>
+      <a href="index.html#faq" class="drawer-link">Preguntas Frecuentes</a>
+      <a href="https://instagram.com/rucoweb.ar" target="_blank" rel="noopener noreferrer" class="drawer-link" style="color: var(--text-pine); font-size: 1.05rem;">
+        <span>Instagram @rucoweb.ar</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+      </a>
+    </div>
+
+    <div class="drawer-footer">
+      <a href="https://wa.me/5491125739968?text=Hola%20Ruco!%20Quiero%20consultar%20por%20los%20planes" class="btn btn-whatsapp btn-full" target="_blank" rel="noopener noreferrer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.886 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span>Hablar por WhatsApp</span>
+      </a>
+    </div>
+  </aside>
+
+  <main style="padding-top: calc(var(--header-height) + 20px);">
+    <!-- ==========================================================================
+         CABECERA DE LA PÁGINA DE PLANES
+         ========================================================================== -->
+    <section class="section" style="padding-top: 40px; padding-bottom: 40px;">
+      <div class="container">
+        <a href="index.html" class="client-direct-link" style="margin-bottom: 24px; display: inline-flex; align-items: center; gap: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <span>Volver al Inicio</span>
+        </a>
+
+        <div class="section-header reveal" style="margin-bottom: 40px;">
+          <span class="section-badge">Precios Honestos</span>
+          <h1 class="section-title">Planes Transparentes y a Tu Medida</h1>
+          <p class="section-subtitle">
+            Sin costos ocultos ni letras chicas. Un desarrollo inicial llave en mano y un abono mensual accesible que cuida y mantiene tu presencia digital año tras año.
+          </p>
+        </div>
+
+        <!-- Grilla de Planes Principales -->
+        <div class="pricing-grid reveal">
+          <!-- Plan 1: Landing Exprés -->
+          <div class="pricing-card-soft">
+            <h2 class="pricing-name">Landing Exprés</h2>
+            <p class="pricing-desc">Ideal para profesionales, talleres mecánicos o servicios que requieren contacto rápido.</p>
+            <div class="pricing-cost">
+              <span class="pricing-currency">Cotización</span>
+              <span class="pricing-amount">A Medida</span>
+              <span class="pricing-period">Pago único de desarrollo</span>
+            </div>
+            <ul class="pricing-features">
+              <li>
+                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Diseño 100% Mobile First de 1 página</span>
+              </li>
+              <li>
+                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Botón flotante de WhatsApp directo a un toque</span>
+              </li>
+              <li>
+                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Ficha oficial y optimizada en Google Maps</span>
+              </li>
+              <li>
+                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Dominio oficial (.com o .com.ar) incluido</span>
+              </li>
+              <li>
+                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Carga ultrarrápida en menos de 0.5s</span>
+              </li>
+            </ul>
+            <a href="https://wa.me/5491125739968?text=Hola%20Ruco!%20Quiero%20consultar%20por%20el%20plan%20Landing%20Expr%C3%A9s" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-full">
+              <span>Consultar Landing</span>
+            </a>
+          </div>
+
+          <!-- Plan 2: Web Pro + Catálogo (Destacado) -->
+          <div class="pricing-card-soft featured">
+            <span class="pricing-featured-ribbon">El Más Elegido</span>
+            <h2 class="pricing-name">Web Pro + Catálogo</h2>
+            <p class="pricing-desc">Para comercios con listas de productos, fotos de trabajos o servicios destacados.</p>
+            <div class="pricing-cost">
+              <span class="pricing-currency">Cotización</span>
+              <span class="pricing-amount">A Medida</span>
+              <span class="pricing-period">Pago único de desarrollo</span>
+            </div>
+            <ul class="pricing-features">
+              <li>
+                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Todo lo del plan Landing Exprés</span>
+              </li>
+              <li>
+                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Catálogo visual de productos o lista de servicios</span>
+              </li>
+              <li>
+                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Indexación técnica oficial en Google Search Console</span>
+              </li>
+              <li>
+                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Métricas de visitas con Google Analytics</span>
+              </li>
+              <li>
+                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Redacción profesional y optimización de imágenes</span>
+              </li>
+            </ul>
+            <a href="https://wa.me/5491125739968?text=Hola%20Ruco!%20Quiero%20consultar%20por%20el%20plan%20Web%20Pro%20%2B%20Cat%C3%A1logo" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-full">
+              <span>Pedir Presupuesto Pro</span>
+            </a>
+          </div>
+
+          <!-- Plan 3: Abono Mensual de Tranquilidad -->
+          <div class="pricing-card-soft">
+            <h2 class="pricing-name">Abono Mensual</h2>
+            <p class="pricing-desc">Para que tu web nunca quede abandonada, lenta o desactualizada.</p>
+            <div class="pricing-cost">
+              <span class="pricing-currency">ARS</span>
+              <span class="pricing-amount">$20.000<span style="font-size:1.2rem; font-weight:700;">-35k</span></span>
+              <span class="pricing-period">Por mes (según rubro)</span>
+            </div>
+            <ul class="pricing-features">
+              <li>
+                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Renovación anual del dominio cubierta</strong></span>
+              </li>
+              <li>
+                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Hosting ultra-rápido y Certificado SSL 24/7 activo</span>
+              </li>
+              <li>
+                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Actualizaciones de fotos, precios y horarios por chat</span>
+              </li>
+              <li>
+                <svg class="pricing-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Soporte directo por WhatsApp sin demoras</span>
+              </li>
+            </ul>
+            <a href="https://wa.me/5491125739968?text=Hola%20Ruco!%20Quiero%20consultar%20por%20el%20Abono%20Mensual" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm btn-full">
+              <span>Conocer Condiciones</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MÓDULO OPCIONAL: OPERACIÓN DE GOOGLE ADS
+         ========================================================================== -->
+    <section class="section" style="background: #FFFFFF; padding: 70px 0;">
+      <div class="container">
+        <div class="comparison-grid reveal" style="align-items: center;">
+          <div>
+            <span class="section-badge" style="background: var(--bg-cream-tint);">Aceleración de Tráfico</span>
+            <h2 class="section-title" style="font-size: clamp(1.8rem, 3.2vw, 2.5rem);">
+              Puesto #1 en Google cuando tus clientes buscan con urgencia
+            </h2>
+            <p style="color: var(--text-secondary); margin-bottom: 20px; line-height: 1.65;">
+              Para comercios que necesitan clientes desde el primer día, ofrecemos el servicio opcional de configuración y optimización de <strong>Google Ads</strong>.
+            </p>
+            <ul class="compare-list" style="margin-bottom: 24px;">
+              <li>
+                <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="var(--copper-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Presupuesto diario a tu medida:</strong> Pagás solo por clics reales de personas interesadas en tu barrio.</span>
+              </li>
+              <li>
+                <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="var(--copper-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Control total:</strong> Vos decidís cuánto invertir por día y podés pausarlo cuando quieras.</span>
+              </li>
+              <li>
+                <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="var(--copper-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Reporte Mensual en PDF:</strong> Resumen simple en WhatsApp con cuántas personas te llamaron o escribieron.</span>
+              </li>
+            </ul>
+            <a href="https://wa.me/5491125739968?text=Hola%20Ruco!%20Quiero%20consultar%20por%20la%20operaci%C3%B3n%20de%20Google%20Ads" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+              <span>Consultar Módulo Google Ads</span>
+            </a>
+          </div>
+
+          <div style="background: var(--bg-cream); border: 1px solid var(--border-soft); border-radius: var(--radius-xl); padding: 32px; box-shadow: var(--shadow-soft);">
+            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--text-pine); margin-bottom: 12px;">Filosofía Ruco: $0 de Pauta Obligatoria</h3>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 18px;">
+              A diferencia de las agencias tradicionales que te obligan a pagar pauta todos los meses para existir, nosotros construimos <strong>un activo orgánico en Google Maps</strong> que te pertenece y te genera consultas sin depender obligatoriamente de publicidad paga.
+            </p>
+            <div style="padding: 14px; background: #FFFFFF; border-radius: var(--radius-md); border: 1px solid var(--border-light); font-size: 0.85rem; color: var(--text-pine); font-weight: 600;">
+              ✓ El posicionamiento orgánico en Google Maps viene 100% incluido de base en todos nuestros desarrollos.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FORMULARIO DE AUDITORÍA EXPRÉS (LEAD MAGNET)
+         ========================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="audit-box-soft reveal">
+          <div class="section-header" style="margin-bottom: 24px;">
+            <span class="section-badge">Sin Compromiso</span>
+            <h2 class="section-title">Pedí tu Maqueta y Cotización por WhatsApp</h2>
+            <p class="section-subtitle">
+              Completá estos 3 datos y te preparamos una propuesta a la medida exacta de tu negocio.
+            </p>
+          </div>
+
+          <form class="audit-form" id="auditForm">
+            <div class="form-group">
+              <label class="form-label" for="auditBizName">Nombre de tu comercio o emprendimiento:</label>
+              <input type="text" class="form-input" id="auditBizName" placeholder="Ej: Taller San Cayetano / Estética Lumina" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="auditRubro">Rubro o actividad principal:</label>
+              <input type="text" class="form-input" id="auditRubro" placeholder="Ej: Mecánica de motos / Barbería / Venta de indumentaria" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="auditStatus">¿Qué tipo de web te interesa?</label>
+              <select class="form-select" id="auditStatus">
+                <option value="Landing Exprés (1 página rápida)">Landing Exprés (1 página rápida con WhatsApp)</option>
+                <option value="Web Pro con Catálogo">Web Pro con Catálogo de productos o servicios</option>
+                <option value="Quiero asesoramiento para mi rubro">Quiero asesoramiento para saber cuál me conviene</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" style="padding: 16px;">
+              <span>Recibir Propuesta por WhatsApp</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER OFICIAL
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="footer-avatar-wrap">
+            <img src="assets/logo/rucoweb-avatar.jpg" alt="Ruco Logo" class="footer-avatar-img">
+            <div>
+              <span style="font-weight: 800; font-size: 1.15rem; color: var(--text-pine);">ruco.ar</span>
+              <span style="display:block; font-size: 0.75rem; color: var(--text-muted);">Diseño web moderno</span>
+            </div>
+          </div>
+          <p class="footer-bio">
+            Páginas adaptadas a tu negocio, servicio o institución. 100% pensadas para celulares, con botón de WhatsApp directo y vinculación oficial a Google Maps.
+          </p>
+          <div>
+            <a href="https://instagram.com/rucoweb.ar" target="_blank" rel="noopener noreferrer" style="color:var(--text-pine); display:inline-flex; align-items:center; gap:6px; font-weight:700; font-size:0.88rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <span>Instagram: @rucoweb.ar</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navegación</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#inicio" class="footer-link-item">Inicio</a></li>
+            <li><a href="index.html#clientes" class="footer-link-item">Nuestros Clientes</a></li>
+            <li><a href="index.html#comparativa" class="footer-link-item">¿Por qué una web?</a></li>
+            <li><a href="planes.html" class="footer-link-item" style="color: var(--copper-primary); font-weight: 700;">Planes & Abonos</a></li>
+            <li><a href="index.html#faq" class="footer-link-item">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contacto Directo</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item">📍 Buenos Aires, Argentina</li>
+            <li>
+              <a href="https://wa.me/5491125739968" target="_blank" rel="noopener noreferrer" class="footer-link-item" style="color:var(--text-pine); font-weight:700;">
+                📲 +54 9 11 2573-9968 (WhatsApp)
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/rucoweb.ar" target="_blank" rel="noopener noreferrer" class="footer-link-item">
+                📸 Instagram: @rucoweb.ar
+              </a>
+            </li>
+            <li class="footer-link-item">⚡ Respuesta promedio: &lt; 15 min</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 <strong>Ruco</strong> (ruco.ar). Todos los derechos reservados.
+        </div>
+        <div>
+          Desarrollado con HTML5 semántico, CSS moderno y JS nativo. Cero dependencias pesadas.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Barra Móvil Inferior -->
+  <div class="mobile-bottom-bar" aria-label="Acciones rápidas en celular">
+    <a href="https://wa.me/5491125739968?text=Hola%20Ruco!%20Quiero%20consultar%20por%20los%20planes" target="_blank" rel="noopener noreferrer" class="bottom-bar-btn bottom-btn-wa">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.886 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      <span>WhatsApp Directo</span>
+    </a>
+    <a href="https://instagram.com/rucoweb.ar" target="_blank" rel="noopener noreferrer" class="bottom-bar-btn bottom-btn-ig">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+      <span>Instagram</span>
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
