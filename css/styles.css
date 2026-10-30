@@ -558,7 +558,15 @@ h1, h2, h3, .font-serif {
   color: var(--text-pine);
 }
 
+.hero-title-sans {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: var(--text-pine);
+}
+
 .hero-title span.italic-highlight {
+  font-family: var(--font-serif);
   font-style: italic;
   font-weight: 500;
   color: var(--copper-primary);
