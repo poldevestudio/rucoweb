@@ -1,101 +1,58 @@
-# 🌐 Ruco (`ruco.ar`) — Sitio Web Oficial
+# Ruco (ruco.ar / @rucoweb.ar) 🌿🌐
+### Presencia Digital, Cuidadosamente Diseñada
 
-> **"Tu presencia digital, cuidadosamente diseñada."**  
-> *Ruco | Diseño web moderno · Páginas adaptadas a tu negocio, servicio o institución · 100% adaptadas a celulares.*
-
-Sitio web corporativo y de conversión para la marca y agencia digital **Ruco** ([@ruco.ar](https://www.instagram.com/ruco.ar/)), desarrollado con estética **"Soft Editorial" en blanco cremita**, tipografía serif de alta gama (`Playfair Display`), detalles en bronce/cobre y tinta pino profundo, y una arquitectura técnica **100% Mobile-First** orientada a la captación de comercios locales y pymes en Argentina.
+Sitio web oficial, landing de conversión y página de presentación (Bio Link) desarrollada a medida para **Ruco** ([@rucoweb.ar](https://www.instagram.com/rucoweb.ar/)). Diseñado específicamente para recibir el tráfico de usuarios que llegan desde Instagram y Reels en sus teléfonos celulares y convertirlos en consultas directas a WhatsApp.
 
 ---
 
-## 🎨 Sistema de Diseño "Soft Editorial & Blanco Cremita"
+## 🎨 Identidad & Dirección de Arte ("Soft Editorial Warm")
 
-- **Instagram Oficial:** [@ruco.ar](https://www.instagram.com/ruco.ar/)
-- **Isotipo Anclado en Header:** El logo circular de Instagram con el lazo de infinito 3D permanece **fijo en la barra de navegación superior** junto a la marca `ruco.ar`, con indicador verde de estado en línea.
-- **Paleta Cromática:**
-  - **Fondo Principal:** `#F8F4EE` (Blanco cremita / Warm Almond Cream).
-  - **Superficie de Tarjetas:** `#FFFFFF` (Blanco puro con sombras suaves editoriales).
-  - **Tinta Principal de Titulares:** `#16363B` (Pizarra Pino Profundo, extraído del feed de Instagram).
-  - **Tinta de Lectura:** `#1C2426` (Carbón suave) y `#556669` (Pizarra secundaria).
-  - **Acento Cobre & Bronce:** `#C88742` y `#B87333` (Calidez y destaque en botones y enlaces).
-  - **Detalles Botánicos & Destellos:** Motivos minimalistas de hojas 🌿 y brillos ✨.
-- **Tipografía:**
-  - **Títulos & Encabezados:** `Playfair Display` (Serif suave de alto contraste y toques en itálica).
-  - **Cuerpo & Navegación:** `Plus Jakarta Sans` (Geométrica moderna de máxima legibilidad).
-  - **Detalles Técnicos:** `JetBrains Mono`.
+A partir del perfil y feed de Instagram de `@rucoweb.ar` y del Reel de presentación, la web implementa una estética de **lujo cálido y sereno ("Quiet Luxury / Warm Editorial")**:
+
+- **Fondo:** Blanco cremita y leche tostada (`#FAF6F0`, `#F3EBE1`).
+- **Tipografía Editorial:** Encabezados en `Playfair Display` serif de alta gama con sutiles acentos en itálica terracota (`#B8693E`).
+- **Tipografía de Lectura:** `Plus Jakarta Sans` para máxima legibilidad en pantallas AMOLED/OLED.
+- **Detalles Botánicos:** Trazos lineales de hojas botánicas en las esquinas y destellos de estrella (`✦`), manteniendo la atmósfera orgánica del feed.
+- **Isotipo:** Insignia circular con el símbolo infinito 3D cromado con sutil sombra y micro-interacción.
 
 ---
 
-## 🚀 Secciones & Funcionalidades Principales
+## 🚀 Arquitectura & Funcionalidades
 
-1. **Header Fijo con Logo de Instagram Anclado:**
-   - Foto de perfil oficial con reborde sutil y punto de actividad en verde esmeralda.
-   - Enlace directo a `@ruco.ar` y botón directo a WhatsApp.
+1. **Header Sticky & Chip de Disponibilidad:**
+   - Muestra el estado activo en tiempo real (`● Maquetas sin cargo disponibles`).
+   - Botón directo de contacto por WhatsApp.
 
-2. **Hero Section con Lienzo Interactivo 3D:**
-   - Titular central: *"Tu presencia digital, cuidadosamente diseñada."*
-   - Animación matemática en Canvas de la cinta de infinito (`canvas-loop.js`) con gradientes cálidos de cobre líquido.
+2. **Hero de Alta Conversión (Mobile-First):**
+   - Titular central: *"Tu historia digital, cuidadosamente diseñada."*
+   - Botones rápidos estilo Bio-Link: *Pedir Maqueta Sin Cargo por WhatsApp*, *Ver Clientes en Vivo* e *Instagram oficial*.
+   - Barra de confianza: Carga < 1s, SEO Google Maps 4.9, WhatsApp directo y 0 abonos obligatorios.
 
-3. **"Algunos de nuestros clientes..." (Showcase Interactivo & Enlaces Reales):**
-   - **Teléfono interactivo** con pestañas que simula en tiempo real la navegación móvil en 0.4s.
-   - **Botones con enlaces directos a los sitios web oficiales:**
-     - 🛵 **MOTOS GMW:** Botón a [`https://gmwmotos.com`](https://gmwmotos.com)
-     - 🥖 **Almacén Barrial PH:** Botón a [`https://almacenph.com`](https://almacenph.com)
-     - 🌿 **Vivero Vía Verde:** Botón directo a WhatsApp para ver la maqueta botánica (enlace configurable).
-     - 💃 **Estudio Julieta Sánchez:** Botón para consultar maqueta.
-     - 🪵 **Carpintería Maderar:** Botón para consultar maqueta.
+3. **Showcase Interactivo: Clientes en Vivo:**
+   - **GMW Motos** (`gmwmotos.com`): El caso de estudio del Reel (repuestos urgentes, Google Maps y WhatsApp en 15 seg).
+   - **Almacén PH** (`almacenph.com`): Almacén de barrio con pizarra de ofertas y QR en mostrador.
+   - **Vivero Vía Verde**: Catálogo botánico visual y pedidos por chat.
+   - **RUCO Burger & Beer**: Menú interactivo con carrito de compras directo a WhatsApp sin comisiones.
 
-4. **"¿Por qué tener solo Instagram ya no alcanza?":**
-   - Análisis comparativo que desarma la objeción típica del comerciante explicando por qué el 70% de las ventas urgentes locales ocurren en Google Maps y no en el feed de Instagram.
+4. **El Método RUCO (Inspirado en el Reel):**
+   - 3 tarjetas estratégicas que explican por qué una web propia conectada a Google Maps supera con creces a tener solamente un perfil de Instagram.
 
-5. **Planes & Abono Transparente:**
-   - Plan Landing Exprés.
-   - Plan Web Pro + Catálogo.
-   - Abono Mensual de Tranquilidad ($20.000 a $35.000 ARS/mes) con dominio anual cubierto, hosting y soporte continuo.
+5. **Micro-Simulador de Rubros en Vivo:**
+   - Herramienta interactiva sin dependencias donde el comerciante elige su rubro (Taller, Gastronomía, Vivero, Almacén, Servicios) y la tarjeta actualiza la propuesta y pre-redacta el mensaje de WhatsApp.
 
-6. **Auditoría Visual Exprés a WhatsApp:**
-   - Formulario de 3 campos que genera un mensaje prearmado para solicitar una maqueta visual sin cargo.
+6. **Proceso en 3 Pasos (Sin Riesgo):**
+   - Charlamos 10 minutos → Maqueta preliminar en 48hs sin costo → Publicación final.
 
-7. **Preguntas Frecuentes (FAQ):**
-   - Acordeón interactivo con respuestas claras en lenguaje simple.
+7. **Preguntas Frecuentes (Acordeón):**
+   - Resolución de objeciones comerciales comunes (costo de mantenimiento, tiempos, facilidad de uso).
 
-8. **Barra Móvil Flotante Fija (Mobile-First):**
-   - Acceso inmediato a WhatsApp Directo y a Instagram `@ruco.ar`.
+8. **Barra Móvil Flotante Inferior (Thumb-Zone):**
+   - Botón permanente en la zona del pulgar en móviles para solicitar la maqueta sin cargo en cualquier momento de la navegación.
 
 ---
 
-## 📁 Archivos del Proyecto
-
-```text
-rucoweb/
-├── assets/
-│   ├── logo/
-│   │   ├── favicon.svg             # Ícono vectorial de infinito
-│   │   ├── logo.svg                # Logo SVG con tipografía
-│   │   └── rucoweb-avatar.jpg      # Foto de perfil oficial descargada de @ruco.ar
-│   └── projects/
-│       ├── almacen-fachada.jpg     # Foto real Almacén PH
-│       ├── danza-hero.jpg          # Foto real Estudio Julieta Sánchez
-│       ├── gmw-hero.jpg            # Foto real Taller Motos GMW
-│       ├── maderar-hero.jpg        # Foto real Carpintería Maderar
-│       └── vivero-hero.jpg         # Foto real Vivero Vía Verde
-├── css/
-│   └── styles.css                  # Sistema de diseño "Soft Editorial Blanco Cremita"
-├── js/
-│   ├── canvas-loop.js              # Animación matemática del lazo de infinito interactivo
-│   └── main.js                     # Controlador de clientes, enlaces, FAQ y drawer móvil
-├── index.html                      # Página principal con clientes y propuesta
-├── planes.html                     # Página dedicada exclusiva para planes y abonos
-└── README.md                       # Documentación técnica y comercial
-```
-
----
-
-## 📲 Cómo Probar la Web Localmente
-
-Podés abrir [`rucoweb/index.html`](file:///c:/Users/Polo/Escritorio/Kiosco/rucoweb/index.html) directamente con doble clic en tu navegador, o correr un servidor local con PowerShell:
-
-```powershell
-cd c:\Users\Polo\Escritorio\Kiosco\rucoweb
-python -m http.server 8080
-```
-Luego abrir `http://localhost:8080` en tu navegador.
+## 🛠️ Stack Tecnológico
+- **HTML5 Semántico**: Accesible, preparado para SEO y etiquetas OpenGraph para compartir en WhatsApp e Instagram.
+- **CSS3 Moderno**: Variables nativas, Flexbox, CSS Grid, tipografía fluida con `clamp()`, backdrop-filter blur.
+- **JavaScript Vanilla (ES6+)**: Lógica del simulador, acordeón FAQ y scroll suave sin jQuery ni librerías pesadas.
+- **Rendimiento**: Peso ultra ligero, 100% responsive y carga en menos de 1 segundo en redes móviles 4G.

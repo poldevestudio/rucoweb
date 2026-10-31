@@ -1,218 +1,146 @@
 /**
- * RUCO (ruco.ar) — LÓGICA & EXPERIENCIA INTERACTIVA
- * Estilo Blanco Cremita & Soft Editorial
- * Clientes Reales (gmwmotos.com, almacenph.com, Vivero),
- * Drawer móvil, FAQ y Auditoría Exprés a WhatsApp.
+ * RUCO (ruco.ar / @rucoweb.ar) — Lógica Interactiva
+ * Desarrollado con JavaScript nativo sin dependencias
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  'use strict';
-
-  // ==========================================================================
-  // 1. NAVEGACIÓN, HEADER SCROLL & DRAWER MÓVIL
-  // ==========================================================================
-  const header = document.getElementById('siteHeader');
-  const menuToggle = document.getElementById('menuToggle');
-  const mobileDrawer = document.getElementById('mobileDrawer');
-  const mobileOverlay = document.getElementById('mobileOverlay');
-  const drawerClose = document.getElementById('drawerClose');
-  const drawerLinks = document.querySelectorAll('.drawer-link');
-  const navLinks = document.querySelectorAll('.nav-link');
-
-  function handleScroll() {
-    if (window.scrollY > 30) {
-      header?.classList.add('scrolled');
-    } else {
-      header?.classList.remove('scrolled');
-    }
-    highlightActiveNav();
-  }
-  window.addEventListener('scroll', handleScroll, { passive: true });
-
-  function openDrawer() {
-    mobileDrawer?.classList.add('active');
-    mobileOverlay?.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    menuToggle?.setAttribute('aria-expanded', 'true');
-  }
-
-  function closeDrawer() {
-    mobileDrawer?.classList.remove('active');
-    mobileOverlay?.classList.remove('active');
-    document.body.style.overflow = '';
-    menuToggle?.setAttribute('aria-expanded', 'false');
-  }
-
-  menuToggle?.addEventListener('click', openDrawer);
-  drawerClose?.addEventListener('click', closeDrawer);
-  mobileOverlay?.addEventListener('click', closeDrawer);
-
-  drawerLinks.forEach(link => {
-    link.addEventListener('click', closeDrawer);
-  });
-
-  const sections = document.querySelectorAll('section[id]');
-  function highlightActiveNav() {
-    const scrollY = window.pageYOffset;
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 120;
-      const sectionId = current.getAttribute('id');
-      
-      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${sectionId}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  }
-
-  // ==========================================================================
-  // 2. SECCIÓN: ALGUNOS DE NUESTROS CLIENTES (INTERACTIVO CON ENLACES REALES)
-  // ==========================================================================
-  const clientTabs = document.querySelectorAll('.client-tab-btn');
-  const clientPhoneImg = document.getElementById('clientPhoneImg');
-  const clientPhoneTitle = document.getElementById('clientPhoneTitle');
-  const clientPhoneCat = document.getElementById('clientPhoneCat');
-  const clientPhoneUrl = document.getElementById('clientPhoneUrl');
-  const clientPhoneSpeed = document.getElementById('clientPhoneSpeed');
-  const clientPhoneDesc = document.getElementById('clientPhoneDesc');
-  const clientPhoneLiveBtn = document.getElementById('clientPhoneLiveBtn');
-
-  const clientsData = {
-    gmwmotos: {
-      name: 'MOTOS GMW',
-      cat: 'Taller Mecánico, Repuestos & Accesorios Oficiales',
-      url: 'gmwmotos.com',
-      liveUrl: 'https://gmwmotos.com',
-      btnLabel: 'Visitar gmwmotos.com',
-      img: 'assets/projects/gmw-hero.jpg',
-      speed: '0.4s · 99/100',
-      desc: 'Taller mecánico de motos con turnos exprés por WhatsApp, catálogo de repuestos y sincronización total en Google Maps.'
-    },
-    almacenph: {
-      name: 'Almacén Barrial PH',
-      cat: 'Comestibles, Fiambrería & Proveeduría',
-      url: 'almacenph.com',
-      liveUrl: 'https://almacenph.com',
-      btnLabel: 'Visitar almacenph.com',
-      img: 'assets/projects/almacen-fachada.jpg',
-      speed: '0.4s · 100/100',
-      desc: 'Comercio barrial con horarios de atención actualizados, ofertas destacadas y recepción de pedidos directos para retirar.'
-    },
-    vivero: {
-      name: 'Vivero Vía Verde',
-      cat: 'Plantas de Interior, Exterior & Paisajismo',
-      url: 'viveroviaverde.com.ar',
-      liveUrl: 'https://wa.me/5491125739968?text=Hola%20Ruco!%20Quiero%20ver%20la%20maqueta%20del%20Vivero%20V%C3%ADa%20Verde',
-      btnLabel: 'Ver Maqueta del Vivero',
-      img: 'assets/projects/vivero-hero.jpg',
-      speed: '0.5s · 99/100',
-      desc: 'Catálogo botánico visual con fotos en alta definición y botón para encargar envíos a domicilio en la zona.'
-    }
-  };
-
-  clientTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const clientKey = tab.getAttribute('data-client');
-      if (!clientKey || !clientsData[clientKey]) return;
-
-      clientTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      const data = clientsData[clientKey];
-
-      const phoneScreen = document.querySelector('.phone-screen-light');
-      if (phoneScreen) {
-        phoneScreen.style.opacity = '0.35';
-        phoneScreen.style.transition = 'opacity 0.2s ease';
-      }
-
-      setTimeout(() => {
-        if (clientPhoneUrl) clientPhoneUrl.textContent = data.url;
-        if (clientPhoneTitle) clientPhoneTitle.textContent = data.name;
-        if (clientPhoneCat) clientPhoneCat.textContent = data.cat;
-        if (clientPhoneImg) clientPhoneImg.src = data.img;
-        if (clientPhoneSpeed) clientPhoneSpeed.textContent = data.speed;
-        if (clientPhoneDesc) clientPhoneDesc.textContent = data.desc;
-        if (clientPhoneLiveBtn) {
-          clientPhoneLiveBtn.href = data.liveUrl;
-          const labelSpan = clientPhoneLiveBtn.querySelector('span');
-          if (labelSpan) labelSpan.textContent = data.btnLabel;
-        }
-
-        if (phoneScreen) {
-          phoneScreen.style.opacity = '1';
-        }
-      }, 150);
-    });
-  });
-
-  // ==========================================================================
-  // 3. GENERADOR DE AUDITORÍA EXPRÉS A WHATSAPP
-  // ==========================================================================
-  const auditForm = document.getElementById('auditForm');
-  const auditBizName = document.getElementById('auditBizName');
-  const auditRubro = document.getElementById('auditRubro');
-  const auditStatus = document.getElementById('auditStatus');
-
-  auditForm?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = auditBizName?.value.trim() || 'Mi Negocio';
-    const rubro = auditRubro?.value.trim() || 'General';
-    const status = auditStatus?.value || 'Solo Instagram';
-
-    const message = `Hola Ruco! Quiero solicitar la auditoría visual gratuita para mi negocio:
-- Nombre: ${name}
-- Rubro: ${rubro}
-- Situación actual: ${status}
-
-¿Podemos coordinar para ver una propuesta preliminar?`;
-
-    const waUrl = `https://wa.me/5491125739968?text=${encodeURIComponent(message)}`;
-    window.open(waUrl, '_blank', 'noopener,noreferrer');
-  });
-
-  // ==========================================================================
-  // 4. FAQ INTERACTIVO (ACCORDION SUAVE)
-  // ==========================================================================
-  const faqItems = document.querySelectorAll('.faq-item-soft');
-
-  faqItems.forEach(item => {
-    const btn = item.querySelector('.faq-question-btn');
-    btn?.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-      faqItems.forEach(other => other.classList.remove('active'));
-
-      if (!isActive) {
-        item.classList.add('active');
-      }
-    });
-  });
-
-  // ==========================================================================
-  // 5. ANIMACIONES REVEAL CON INTERSECTION OBSERVER
-  // ==========================================================================
-  const revealElements = document.querySelectorAll('.reveal');
-
-  if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      rootMargin: '0px 0px -40px 0px',
-      threshold: 0.1
-    });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-  } else {
-    revealElements.forEach(el => el.classList.add('visible'));
-  }
+    initSimulator();
+    initFAQ();
+    initSmoothScroll();
 });
+
+/**
+ * Simulador Interactivo de Rubros
+ */
+function initSimulator() {
+    const tabs = document.querySelectorAll('.sim-tab-btn');
+    const titleEl = document.getElementById('simTitle');
+    const descEl = document.getElementById('simDesc');
+    const badgesWrap = document.getElementById('simBadges');
+    const ctaBtn = document.getElementById('simCtaBtn');
+
+    if (!tabs.length || !titleEl || !descEl || !badgesWrap || !ctaBtn) return;
+
+    const dataByRubro = {
+        taller: {
+            title: "Taller Mecánico, Repuestos & Accesorios",
+            desc: "Como en el caso de GMW Motos: cuando un cliente busca repuestos de urgencia en Google Maps, encuentra tu web al instante con catálogo por marcas, ubicación con pin y botón directo a tu WhatsApp.",
+            badges: ["📍 Google Maps 4.9 Destacado", "⚡ Catálogo Rápido Multimarca", "📲 Contacto WhatsApp Inmediato", "🛡️ Filtro de Consultas Frecuentes"],
+            waMsg: "Hola Ruco! Tengo un negocio del rubro Taller y Repuestos de Motos/Autos. Vi el caso de GMW en el Reel y quiero pedir una maqueta sin cargo."
+        },
+        gastro: {
+            title: "Gastronomía, Hamburgueserías, Cervecerías & Cafés",
+            desc: "Menú interactivo con fotos atractivas, categorización clara y carrito que envía el pedido listo y cotizado directamente al WhatsApp del local. 0% comisiones a apps de delivery.",
+            badges: ["🍔 Menú Digital sin App", "🛒 Carrito con Envío a WhatsApp", "🕒 Horarios de Cocina Dinámicos", "💳 0% Comisiones"],
+            waMsg: "Hola Ruco! Tengo un local gastronómico y me interesa tener un menú web propio con carrito para WhatsApp sin pagar comisiones."
+        },
+        vivero: {
+            title: "Viveros, Jardinería & Tiendas Deco",
+            desc: "Galería estética y ordenada de especies de plantas, macetas e insumos, permitiendo que el cliente consulte stock y precios por WhatsApp con una sola captura o clic.",
+            badges: ["🌿 Catálogo Botánico Visual", "📸 Galería de Especies", "🚚 Canal de Envíos a Domicilio", "⭐ SEO Local de Zona"],
+            waMsg: "Hola Ruco! Tengo un vivero / tienda de plantas y quiero una web estética y visual para mostrar catálogo y recibir consultas directas."
+        },
+        almacen: {
+            title: "Almacenes, Fiambrerías & Comercios de Barrio",
+            desc: "Tu negocio de confianza ahora con presencia digital: código QR en el mostrador para los vecinos, pizarra de promociones del día y pedidos para retiro o delivery.",
+            badges: ["🏷️ Pizarra de Ofertas Semanales", "📱 QR Listo para el Mostrador", "🛵 Pedidos Vecinales por Chat", "📍 Fácil de Encontrar en el Barrio"],
+            waMsg: "Hola Ruco! Tengo un almacén / comercio barrial y quiero una web simple y rápida para que los vecinos me hagan pedidos directo al WhatsApp."
+        },
+        servicios: {
+            title: "Oficios, Profesionales & Servicios a Domicilio",
+            desc: "Tu tarjeta de presentación digital premium: mostrá tus trabajos realizados, testimonios de clientes satisfechos y canalizá presupuestos serios sin perder tiempo.",
+            badges: ["💼 Portafolio de Trabajos", "⭐ Testimonios & Calificaciones", "📝 Formulario Exprés a WhatsApp", "🚀 Carga Ultrarrápida en 4G"],
+            waMsg: "Hola Ruco! Ofrezco servicios profesionales y quiero una web sobria y profesional que me ayude a cerrar más presupuestos."
+        }
+    };
+
+    const waPhone = "5491126731952";
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const rubro = tab.getAttribute('data-rubro');
+            const info = dataByRubro[rubro];
+            if (!info) return;
+
+            // Actualizar botones activos
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            // Actualizar contenido con fade sutil
+            titleEl.style.opacity = '0';
+            descEl.style.opacity = '0';
+            badgesWrap.style.opacity = '0';
+
+            setTimeout(() => {
+                titleEl.textContent = info.title;
+                descEl.textContent = info.desc;
+                
+                // Limpiar y cargar nuevos badges
+                badgesWrap.innerHTML = '';
+                info.badges.forEach(b => {
+                    const span = document.createElement('span');
+                    span.className = 'sim-feature-badge';
+                    span.textContent = b;
+                    badgesWrap.appendChild(span);
+                });
+
+                // Actualizar botón de WhatsApp
+                const encodedMsg = encodeURIComponent(info.waMsg);
+                ctaBtn.href = `https://wa.me/${waPhone}?text=${encodedMsg}`;
+                ctaBtn.innerHTML = `<span>Pedir Maqueta de este Rubro</span> <span>→</span>`;
+
+                titleEl.style.opacity = '1';
+                descEl.style.opacity = '1';
+                badgesWrap.style.opacity = '1';
+            }, 180);
+        });
+    });
+
+    // Iniciar transiciones suaves
+    [titleEl, descEl, badgesWrap].forEach(el => {
+        el.style.transition = 'opacity 0.2s ease';
+    });
+}
+
+/**
+ * Acordeón de Preguntas Frecuentes
+ */
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const questionBtn = item.querySelector('.faq-question');
+        if (!questionBtn) return;
+
+        questionBtn.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+            
+            // Cerrar otros
+            faqItems.forEach(other => {
+                if (other !== item) other.classList.remove('open');
+            });
+
+            // Toggle actual
+            item.classList.toggle('open', !isOpen);
+        });
+    });
+}
+
+/**
+ * Desplazamiento Suave
+ */
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            const target = document.querySelector(targetId);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}

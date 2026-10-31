@@ -1,637 +1,535 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Ruco | Páginas Web Modernas y Cuidadosamente Diseñadas (ruco.ar)</title>
-  <meta name="description" content="Diseño web moderno, ultrarrápido y 100% adaptado a celulares. Conectamos tu comercio con clientes reales en Google Maps y WhatsApp.">
-  <meta name="author" content="Ruco (ruco.ar)">
-  <meta name="theme-color" content="#F8F4EE">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#FAF6F0">
+    <title>Ruco (ruco.ar) — Tu historia digital, cuidadosamente diseñada</title>
+    <meta name="description" content="Páginas web artesanales, ultrarrápidas y 100% adaptadas a celulares para comercios locales. Conectamos tu negocio con clientes reales por Google Maps y WhatsApp directo.">
 
-  <!-- Open Graph / Redes Sociales -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ruco.ar/">
-  <meta property="og:title" content="Ruco | Tu Historia Digital, Cuidadosamente Diseñada">
-  <meta property="og:description" content="Páginas adaptadas a tu negocio, servicio o institución. 100% adaptadas a celulares y conectadas a WhatsApp.">
-  <meta property="og:image" content="assets/logo/rucoweb-avatar.jpg">
+    <!-- Open Graph / Redes Sociales & WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ruco (ruco.ar) — Tu presencia digital a medida">
+    <meta property="og:description" content="Páginas web modernas y ultrarrápidas pensadas para convertir visitas en ventas directas por WhatsApp. Maquetas preliminares sin cargo.">
+    <meta property="og:image" content="assets/logo/ruco-badge-512.png">
+    <meta property="og:url" content="https://ruco.ar">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
-  <link rel="apple-touch-icon" href="assets/logo/rucoweb-avatar.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo/favicon.png">
 
-  <!-- Tipografía: Playfair Display (Serif Soft) & Plus Jakarta Sans (Cuerpo) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Estilos Mobile First "Soft Editorial" -->
-  <link rel="stylesheet" href="css/styles.css?v=2.5">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- ==========================================================================
-       BARRA DE NAVEGACIÓN FIJA CON LOGO ANCLADO & SOLO HAMBURGUESA
-       ========================================================================== -->
-  <header class="site-header" id="siteHeader">
-    <div class="container nav-wrap">
-      <!-- Logo del Perfil de Instagram Anclado -->
-      <a href="#inicio" class="brand-link" aria-label="Ruco - Inicio">
-        <div class="brand-avatar-wrap">
-          <img src="assets/logo/rucoweb-avatar.jpg" alt="Ruco Logo" class="brand-avatar-img">
-        </div>
-        <div class="brand-text">
-          <span class="brand-title">ruco<span class="brand-ext">.ar</span></span>
-          <span class="brand-tagline">Diseño Web Moderno</span>
-        </div>
-      </a>
+    <!-- Rama Botánica Superior Izquierda (Acento de Reel e Instagram) -->
+    <svg class="botanical-leaf botanical-leaf-tl" viewBox="0 0 100 100" fill="none" stroke="#162B25" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M20,80 Q50,45 85,15" />
+        <path d="M85,15 Q60,10 50,30 Q65,35 85,15 Z" />
+        <path d="M62,38 Q38,30 35,50 Q48,52 62,38 Z" />
+        <path d="M44,56 Q25,52 25,68 Q36,68 44,56 Z" />
+    </svg>
 
-      <!-- Menú Escritorio -->
-      <nav class="nav-links" aria-label="Menú principal">
-        <a href="#inicio" class="nav-link active">Inicio</a>
-        <a href="#clientes" class="nav-link">Nuestros Clientes</a>
-        <a href="#comparativa" class="nav-link">¿Por qué una web?</a>
-        <a href="planes.html" class="nav-link">Planes & Abonos</a>
-        <a href="#faq" class="nav-link">Preguntas</a>
-      </nav>
-
-      <!-- Acciones: SOLO Botón Hamburguesa -->
-      <div class="nav-actions">
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Menú Drawer Desplegable -->
-  <div class="mobile-overlay" id="mobileOverlay"></div>
-  <aside class="mobile-drawer" id="mobileDrawer">
-    <div class="drawer-header">
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <img src="assets/logo/rucoweb-avatar.jpg" alt="Ruco Logo" style="width:36px; height:36px; border-radius:50%;">
-        <span style="font-weight: 800; font-size: 1.15rem; color: var(--text-pine);">ruco.ar</span>
-      </div>
-      <button class="drawer-close" id="drawerClose" aria-label="Cerrar menú">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-    </div>
-
-    <div class="drawer-links">
-      <a href="#inicio" class="drawer-link">Inicio</a>
-      <a href="#clientes" class="drawer-link">Nuestros Clientes</a>
-      <a href="#comparativa" class="drawer-link">Instagram vs. Web</a>
-      <a href="planes.html" class="drawer-link">Planes & Abonos</a>
-      <a href="#faq" class="drawer-link">Preguntas Frecuentes</a>
-      <a href="https://instagram.com/rucoweb.ar" target="_blank" rel="noopener noreferrer" class="drawer-link" style="color: var(--copper-primary); font-size: 1.1rem;">
-        <span>Instagram @rucoweb.ar</span>
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-      </a>
-    </div>
-
-    <div class="drawer-footer">
-      <a href="https://wa.me/5491125739968?text=Hola%20Ruco!%20Quiero%20consultar%20por%20una%20web" class="btn btn-whatsapp btn-full" target="_blank" rel="noopener noreferrer">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.886 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        <span>Hablar por WhatsApp</span>
-      </a>
-    </div>
-  </aside>
-
-  <main>
-    <!-- ==========================================================================
-         HERO SECTION (LIMPIO, EDITORIAL & CENTRADO)
-         ========================================================================== -->
-    <section class="hero" id="inicio">
-      <!-- Canvas interactivo con el lazo de infinito en tonos cobre suave -->
-      <canvas id="heroCanvas" class="hero-canvas-bg" aria-hidden="true"></canvas>
-
-      <!-- Detalle botánico decorativo minimalista -->
-      <svg class="hero-botanical-leaf" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
-        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
-      </svg>
-
-      <div class="container">
-        <!-- Contenedor Centrado y Elegante sin el cuadro secundario -->
-        <div class="hero-centered-wrap reveal">
-          <h1 class="hero-title">
-            <span class="hero-title-sans">Tu presencia digital,</span> <br><span class="italic-highlight">cuidadosamente diseñada</span>.
-          </h1>
-
-          <p class="hero-description">
-            Páginas web modernas, ultrarrápidas y <strong>100% adaptadas a celulares</strong>. Conectamos tu comercio o servicio con clientes reales en tu zona a través de <strong>Google Maps</strong> y consultas directas a tu <strong>WhatsApp</strong> con un solo toque.
-          </p>
-
-          <div class="hero-cta-group">
-            <a href="https://wa.me/5491125739968?text=Hola%20Ruco!%20Quiero%20solicitar%20una%20maqueta%20preliminar%20para%20mi%20negocio" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              <span>Pedir Maqueta Sin Cargo</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <a href="#clientes" class="btn btn-secondary">
-              <span>Ver Clientes en Vivo</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-            </a>
-          </div>
-
-          <!-- Métricas Clave de Confianza -->
-          <div class="hero-badges-row">
-            <div class="hero-stat-card">
-              <span class="hero-stat-val text-copper">&lt; 0.5s</span>
-              <span class="hero-stat-label">Carga ultrarrápida en celulares</span>
-            </div>
-            <div class="hero-stat-card">
-              <span class="hero-stat-val">#1 Maps</span>
-              <span class="hero-stat-label">Posicionamiento en tu barrio</span>
-            </div>
-            <div class="hero-stat-card">
-              <span class="hero-stat-val" style="color: var(--pine-accent);">$0 Pauta</span>
-              <span class="hero-stat-label">Crecimiento orgánico permanente</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         TICKER DE VALOR & CONFIANZA
-         ========================================================================== -->
-    <div class="trust-ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span class="ticker-item"><span class="ticker-bullet">✦</span> Dominio Oficial Propio</span>
-        <span class="ticker-item"><span class="ticker-bullet">✦</span> Ficha Optimizada en Google Maps</span>
-        <span class="ticker-item"><span class="ticker-bullet">✦</span> 100% Mobile First en Celulares</span>
-        <span class="ticker-item"><span class="ticker-bullet">✦</span> Botón de WhatsApp Flotante</span>
-        <span class="ticker-item"><span class="ticker-bullet">✦</span> Carga en menos de 1 Segundo</span>
-        <span class="ticker-item"><span class="ticker-bullet">✦</span> Mantenimiento Continuo Sin Estrés</span>
-        <span class="ticker-item"><span class="ticker-bullet">✦</span> Certificado de Seguridad SSL</span>
-        <!-- Duplicado para loop continuo -->
-        <span class="ticker-item"><span class="ticker-bullet">✦</span> Dominio Oficial Propio</span>
-        <span class="ticker-item"><span class="ticker-bullet">✦</span> Ficha Optimizada en Google Maps</span>
-        <span class="ticker-item"><span class="ticker-bullet">✦</span> 100% Mobile First en Celulares</span>
-        <span class="ticker-item"><span class="ticker-bullet">✦</span> Botón de WhatsApp Flotante</span>
-        <span class="ticker-item"><span class="ticker-bullet">✦</span> Carga en menos de 1 Segundo</span>
-        <span class="ticker-item"><span class="ticker-bullet">✦</span> Mantenimiento Continuo Sin Estrés</span>
-        <span class="ticker-item"><span class="ticker-bullet">✦</span> Certificado de Seguridad SSL</span>
-      </div>
-    </div>
-
-    <!-- ==========================================================================
-         SECCIÓN: ALGUNOS DE NUESTROS CLIENTES (INTERACTIVO CON ENLACES REALES)
-         ========================================================================== -->
-    <section class="section clients-section" id="clientes">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-badge">Casos Reales en Línea</span>
-          <h2 class="section-title">Algunos de nuestros clientes...</h2>
-          <p class="section-subtitle">
-            Sitios web reales desarrollados a medida, con dominio propio y optimizados para convertir visitantes en clientes todos los días.
-          </p>
-        </div>
-
-        <!-- Botones de Selección Rápida de Clientes -->
-        <div class="clients-nav-tabs reveal">
-          <button class="client-tab-btn active" data-client="gmwmotos">
-            <span>🛵 MOTOS GMW (gmwmotos.com)</span>
-          </button>
-          <button class="client-tab-btn" data-client="almacenph">
-            <span>🥖 Almacén PH (almacenph.com)</span>
-          </button>
-          <button class="client-tab-btn" data-client="vivero">
-            <span>🌿 Vivero Vía Verde</span>
-          </button>
-        </div>
-
-        <!-- Escenario Interactivo del Teléfono -->
-        <div class="clients-stage reveal">
-          <div class="phone-mockup-light">
-            <div class="phone-screen-light">
-              <!-- Dynamic Island -->
-              <div class="phone-dynamic-island">
-                <div class="dynamic-island-cam"></div>
-              </div>
-
-              <!-- Barra de Navegador en Celular -->
-              <div class="phone-browser-bar-light">
-                <div class="phone-url-chip-light">
-                  <span>🔒</span>
-                  <span id="clientPhoneUrl">gmwmotos.com</span>
+    <!-- Header / Barra Fija -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#inicio" class="brand-wrapper" aria-label="Ruco.ar Inicio">
+                <div class="brand-badge">
+                    <img src="assets/logo/ruco-infinity-3d.png" alt="Logo Ruco" width="44" height="44">
                 </div>
-                <div class="phone-speed-badge-light" id="clientPhoneSpeed">0.4s · 99/100</div>
-              </div>
+                <div class="brand-text">
+                    <span class="brand-name">ruco<span>.ar</span></span>
+                    <span class="brand-tag">Presencia Digital</span>
+                </div>
+            </a>
 
-              <!-- Contenido Interior Dinámico -->
-              <div class="phone-inner-content-light">
-                <div class="client-phone-banner">
-                  <img src="assets/projects/gmw-hero.jpg" alt="Cliente Ruco" id="clientPhoneImg">
-                  <div class="client-phone-overlay">
-                    <h4 class="client-phone-title" id="clientPhoneTitle">MOTOS GMW</h4>
-                    <span class="client-phone-cat" id="clientPhoneCat">Taller Mecánico, Repuestos & Accesorios</span>
-                  </div>
+            <div class="header-actions">
+                <div class="availability-chip" title="Cupos para maquetas esta semana">
+                    <span class="pulse-dot"></span>
+                    <span>Maquetas sin cargo disponibles</span>
                 </div>
 
-                <div class="client-phone-details">
-                  <h5>⭐ 4.9 en Google Maps · Sincronizado</h5>
-                  <p id="clientPhoneDesc">
-                    Taller mecánico de motos con turnos exprés por WhatsApp, catálogo de repuestos y sincronización total en Google Maps.
-                  </p>
+                <a href="https://wa.me/5491126731952?text=Hola%20Ruco!%20Te%20escribo%20desde%20tu%20web%20para%20hacerte%20una%20consulta." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn-header-wa"
+                   aria-label="Contactar por WhatsApp">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    <span>Escribir por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===================================================================
+             Hero Section: Editorial Warm
+             =================================================================== -->
+        <section class="hero-section" id="inicio">
+            <div class="container hero-content">
+                <div class="hero-pill">
+                    <span>✦</span> Presencia Web & SEO Local a Medida
                 </div>
 
-                <!-- Botón Directo para visitar la web oficial -->
-                <a href="https://gmwmotos.com" target="_blank" rel="noopener noreferrer" class="client-live-btn" id="clientPhoneLiveBtn">
-                  <span>Visitar gmwmotos.com</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+                <h1 class="hero-title">
+                    Tu historia digital,<br>
+                    <em>cuidadosamente diseñada.</em>
+                </h1>
 
-        <!-- Grilla de Tarjetas de Clientes con Botones a sus Sitios Web -->
-        <div class="clients-grid reveal">
-          <!-- Cliente 1: MOTOS GMW -->
-          <article class="client-card-item">
-            <div class="client-card-thumb">
-              <img src="assets/projects/gmw-hero.jpg" alt="Motos GMW Taller" loading="lazy">
-              <span class="client-card-badge">Web Oficial en Línea</span>
-            </div>
-            <div class="client-card-body">
-              <span class="client-card-cat">Mecánica & Repuestos</span>
-              <h3 class="client-card-title">MOTOS GMW</h3>
-              <p class="client-card-desc">
-                Taller mecánico integral y venta de accesorios. Diseñado para pedir turnos en un clic y consultar catálogo de baterías y repuestos en stock.
-              </p>
-              <div class="client-card-actions">
-                <a href="https://gmwmotos.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm client-direct-link">
-                  <span>Visitar gmwmotos.com</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-                </a>
-              </div>
-            </div>
-          </article>
+                <p class="hero-description">
+                    Páginas web artesanales, ultrarrápidas y <strong>100% pensadas para celulares</strong>. Conectamos tu comercio o servicio con clientes decididos en tu zona a través de <strong>Google Maps</strong> y consultas directas a tu <strong>WhatsApp</strong> con un solo toque.
+                </p>
 
-          <!-- Cliente 2: Almacén PH -->
-          <article class="client-card-item">
-            <div class="client-card-thumb">
-              <img src="assets/projects/almacen-fachada.jpg" alt="Almacén PH" loading="lazy">
-              <span class="client-card-badge">Web Oficial en Línea</span>
-            </div>
-            <div class="client-card-body">
-              <span class="client-card-cat">Comestibles & Proveeduría</span>
-              <h3 class="client-card-title">Almacén PH</h3>
-              <p class="client-card-desc">
-                Presencia oficial en el barrio para consultar horarios de apertura, ofertas semanales y realizar encargos de fiambrería para retirar.
-              </p>
-              <div class="client-card-actions">
-                <a href="https://almacenph.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm client-direct-link">
-                  <span>Visitar almacenph.com</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-                </a>
-              </div>
-            </div>
-          </article>
+                <!-- Acciones directas (Bio Link Style para tráfico de Instagram) -->
+                <div class="hero-cta-group">
+                    <a href="https://wa.me/5491126731952?text=Hola%20Ruco!%20Vengo%20desde%20Instagram%20y%20quiero%20pedir%20mi%20maqueta%20sin%20cargo%20para%20mi%20negocio." 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn-primary-wa">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        <span>Pedir Maqueta Sin Cargo</span>
+                        <span>→</span>
+                    </a>
 
-          <!-- Cliente 3: Vivero Vía Verde -->
-          <article class="client-card-item">
-            <div class="client-card-thumb">
-              <img src="assets/projects/vivero-hero.jpg" alt="Vivero Vía Verde" loading="lazy">
-              <span class="client-card-badge">Próximamente Online</span>
-            </div>
-            <div class="client-card-body">
-              <span class="client-card-cat">Jardinería & Paisajismo</span>
-              <h3 class="client-card-title">Vivero Vía Verde</h3>
-              <p class="client-card-desc">
-                Catálogo botánico visual de plantas de interior, árboles frutales y macetas con opción para encargar envíos a domicilio en la zona.
-              </p>
-              <div class="client-card-actions">
-                <a href="https://wa.me/5491125739968?text=Hola%20Ruco!%20Quiero%20ver%20la%20maqueta%20del%20Vivero" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm client-direct-link">
-                  <span>Ver Maqueta en WhatsApp</span>
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-                </a>
-              </div>
-            </div>
-          </article>
+                    <a href="#clientes" class="btn-secondary">
+                        <span>Ver Clientes en Vivo</span>
+                        <span>↓</span>
+                    </a>
 
-          <!-- Tarjeta CTA: Sumá tu Comercio -->
-          <article class="client-card-item" style="border: 2px dashed var(--border-soft); background: var(--bg-cream-tint); justify-content: center; align-items: center; text-align: center; padding: 40px 24px;">
-            <div style="width: 58px; height: 58px; border-radius: 50%; background: #FFFFFF; border: 1px solid var(--border-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; box-shadow: var(--shadow-soft);">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--copper-primary)" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    <a href="https://www.instagram.com/rucoweb.ar/" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn-ig-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <span>@rucoweb.ar</span>
+                    </a>
+                </div>
+
+                <!-- Tickers de Confianza -->
+                <div class="hero-trust-bar">
+                    <div class="trust-item">
+                        <span class="trust-icon">⚡</span>
+                        <span>Carga en menos de 1 seg</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">📍</span>
+                        <span>SEO Google Maps 4.9</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">💬</span>
+                        <span>1 toque a tu WhatsApp</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">🛡️</span>
+                        <span>Sin abonos obligatorios</span>
+                    </div>
+                </div>
             </div>
-            <h3 class="client-card-title" style="margin-bottom: 8px;">¿Querés sumar tu negocio?</h3>
-            <p class="client-card-desc" style="max-width: 270px; margin-bottom: 22px;">
-              Armamos una maqueta preliminar sin cargo para que veas tu web antes de abonar nada.
+        </section>
+
+        <!-- ===================================================================
+             Nuestros Clientes en Vivo (Showcase)
+             =================================================================== -->
+        <section class="section" id="clientes">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Trabajos Reales</span>
+                    <h2 class="section-title">Algunos de nuestros clientes</h2>
+                    <p class="section-subtitle">Webs publicadas y generando consultas comerciales reales todos los días.</p>
+                </div>
+
+                <div class="showcase-grid">
+                    <!-- Cliente 1: GMW Motos (Destacado del Reel) -->
+                    <article class="showcase-card">
+                        <div class="showcase-badge-reel">
+                            <span>🎬</span> Caso del Reel
+                        </div>
+                        <div class="showcase-img-wrap">
+                            <img src="assets/projects/gmw-fachada.jpg" alt="Fachada y local GMW Motos" loading="lazy">
+                        </div>
+                        <div class="showcase-body">
+                            <div class="showcase-meta">
+                                <span class="showcase-sector">Taller & Repuestos</span>
+                                <span class="showcase-status">En Línea</span>
+                            </div>
+                            <h3 class="showcase-title">GMW Motos</h3>
+                            <p class="showcase-desc">
+                                El cliente busca en Google con urgencia repuestos en su zona, encuentra la web en 1 segundo y toca el botón para consultar stock directo por WhatsApp.
+                            </p>
+                            <div class="showcase-tags">
+                                <span class="tag-pill">Google Maps 4.9</span>
+                                <span class="tag-pill">Catálogo Multimarca</span>
+                                <span class="tag-pill">Carga 0.8s</span>
+                            </div>
+                            <div class="showcase-actions">
+                                <a href="https://gmwmotos.com" target="_blank" rel="noopener noreferrer" class="btn-view-live">
+                                    <span>Visitar gmwmotos.com</span>
+                                    <span>↗</span>
+                                </a>
+                                <a href="https://wa.me/5491126731952?text=Hola%20Ruco!%20Vi%20la%20web%20de%20GMW%20Motos%20y%20quiero%20una%20propuesta%20similar%20para%20mi%20taller." 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="btn-request-similar" 
+                                   title="Pedir maqueta similar">
+                                    💬
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Cliente 2: Almacén PH -->
+                    <article class="showcase-card">
+                        <div class="showcase-img-wrap">
+                            <img src="assets/projects/almacen-local.jpg" alt="Local Almacén PH" loading="lazy">
+                        </div>
+                        <div class="showcase-body">
+                            <div class="showcase-meta">
+                                <span class="showcase-sector">Almacén de Barrio</span>
+                                <span class="showcase-status">En Línea</span>
+                            </div>
+                            <h3 class="showcase-title">Almacén PH</h3>
+                            <p class="showcase-desc">
+                                Pizarra digital de promociones semanales y código QR en el mostrador físico para que los vecinos hagan sus pedidos cómodos desde el celular.
+                            </p>
+                            <div class="showcase-tags">
+                                <span class="tag-pill">QR Mostrador</span>
+                                <span class="tag-pill">Mobile First</span>
+                                <span class="tag-pill">Pedidos Vecinales</span>
+                            </div>
+                            <div class="showcase-actions">
+                                <a href="https://almacenph.com" target="_blank" rel="noopener noreferrer" class="btn-view-live">
+                                    <span>Visitar almacenph.com</span>
+                                    <span>↗</span>
+                                </a>
+                                <a href="https://wa.me/5491126731952?text=Hola%20Ruco!%20Vi%20la%20web%20de%20Almacen%20PH%20y%20quiero%20una%20maqueta%20para%20mi%20comercio." 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="btn-request-similar" 
+                                   title="Pedir maqueta similar">
+                                    💬
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Cliente 3: Vivero Vía Verde -->
+                    <article class="showcase-card">
+                        <div class="showcase-img-wrap">
+                            <img src="assets/projects/vivero-hero.jpg" alt="Vivero Vía Verde" loading="lazy">
+                        </div>
+                        <div class="showcase-body">
+                            <div class="showcase-meta">
+                                <span class="showcase-sector">Vivero & Jardinería</span>
+                                <span class="showcase-status">En Línea</span>
+                            </div>
+                            <h3 class="showcase-title">Vivero Vía Verde</h3>
+                            <p class="showcase-desc">
+                                Catálogo botánico visual que inspira a clientes amantes de las plantas y canaliza pedidos de macetas, tierra y especies con cotización por chat.
+                            </p>
+                            <div class="showcase-tags">
+                                <span class="tag-pill">Catálogo Botánico</span>
+                                <span class="tag-pill">Galería Visual</span>
+                                <span class="tag-pill">SEO Paisajismo</span>
+                            </div>
+                            <div class="showcase-actions">
+                                <a href="https://wa.me/5491126731952?text=Hola%20Ruco!%20Quiero%20ver%20la%20maqueta%20del%20Vivero%20Via%20Verde%20y%20armar%20una%20para%20mi%20vivero." 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="btn-view-live">
+                                    <span>Consultar Maqueta</span>
+                                    <span>↗</span>
+                                </a>
+                                <a href="https://wa.me/5491126731952?text=Hola%20Ruco!%20Quiero%20una%20web%20para%20mi%20vivero%20o%20tienda%20verde." 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="btn-request-similar" 
+                                   title="Pedir maqueta similar">
+                                    💬
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Cliente 4: RUCO Burger (Demo Gastronómica) -->
+                    <article class="showcase-card">
+                        <div class="showcase-img-wrap">
+                            <img src="assets/projects/ruco-burger.jpg" alt="RUCO Burger & Drinks" loading="lazy">
+                        </div>
+                        <div class="showcase-body">
+                            <div class="showcase-meta">
+                                <span class="showcase-sector">Gastronomía & Bares</span>
+                                <span class="showcase-status">Demo Activa</span>
+                            </div>
+                            <h3 class="showcase-title">RUCO Burger & Beer</h3>
+                            <p class="showcase-desc">
+                                Menú interactivo con fotos irresistibles, carrito en vivo y mensaje con pedido pre-armado a WhatsApp. Sin pagar un centavo de comisión por venta.
+                            </p>
+                            <div class="showcase-tags">
+                                <span class="tag-pill">Menú Online</span>
+                                <span class="tag-pill">Carrito WhatsApp</span>
+                                <span class="tag-pill">0% Comisiones</span>
+                            </div>
+                            <div class="showcase-actions">
+                                <a href="../WebHamburguesera-RUCO/index.html" class="btn-view-live">
+                                    <span>Ver Demo Gastronómica</span>
+                                    <span>↗</span>
+                                </a>
+                                <a href="https://wa.me/5491126731952?text=Hola%20Ruco!%20Vi%20el%20menu%20interactivo%20de%20hamburguesas%20y%20quiero%20uno%20para%20mi%20local." 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="btn-request-similar" 
+                                   title="Pedir maqueta similar">
+                                    💬
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             El Método RUCO: 3 Pilares de Conversión (Inspirado en el Reel)
+             =================================================================== -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">La Estrategia</span>
+                    <h2 class="section-title">¿Por qué una web propia cambia las reglas?</h2>
+                    <p class="section-subtitle">No alcanza con tener solo Instagram. Así es el camino del cliente que compra hoy.</p>
+                </div>
+
+                <div class="method-grid">
+                    <div class="method-card">
+                        <div class="method-num">01</div>
+                        <h3 class="method-title">Búsqueda con Urgencia</h3>
+                        <p class="method-desc">
+                            Cuando una persona rompe su moto, necesita comida para ya o busca una planta específica, <strong>abre Google</strong>. Si tu negocio tiene web propia conectada a Google Maps, te elige a vos antes que a cualquiera.
+                        </p>
+                    </div>
+
+                    <div class="method-card">
+                        <div class="method-num">02</div>
+                        <h3 class="method-title">Carga en 1 Segundo</h3>
+                        <p class="method-desc">
+                            En el celular, cada segundo de demora es una venta perdida. Nuestras páginas están construidas a mano, sin plantillas pesadas ni código basura, para abrir instantáneamente en 4G.
+                        </p>
+                    </div>
+
+                    <div class="method-card">
+                        <div class="method-num">03</div>
+                        <h3 class="method-title">De la Visita al WhatsApp</h3>
+                        <p class="method-desc">
+                            Sin formularios que nadie llena ni registros obligatorios. La página guía al visitante hacia una conversación de venta real, directa a tu número de WhatsApp.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             Micro-Simulador Interactivo de Rubros
+             =================================================================== -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Diagnóstico Rápido</span>
+                    <h2 class="section-title">Elegí tu rubro y mirá la solución recomendada</h2>
+                    <p class="section-subtitle">Diseñamos cada detalle en función del comportamiento real de tus compradores.</p>
+                </div>
+
+                <div class="sim-container">
+                    <div class="sim-tabs" role="tablist">
+                        <button class="sim-tab-btn active" data-rubro="taller" role="tab">🛵 Taller & Repuestos</button>
+                        <button class="sim-tab-btn" data-rubro="gastro" role="tab">🍔 Gastronomía & Bares</button>
+                        <button class="sim-tab-btn" data-rubro="vivero" role="tab">🌿 Viveros & Deco</button>
+                        <button class="sim-tab-btn" data-rubro="almacen" role="tab">🛒 Almacén & Negocio</button>
+                        <button class="sim-tab-btn" data-rubro="servicios" role="tab">✂️ Servicios Profesionales</button>
+                    </div>
+
+                    <div class="sim-result-box">
+                        <div class="sim-result-content">
+                            <h4 id="simTitle">Taller Mecánico, Repuestos & Accesorios</h4>
+                            <p id="simDesc">
+                                Como en el caso de GMW Motos: cuando un cliente busca repuestos de urgencia en Google Maps, encuentra tu web al instante con catálogo por marcas, ubicación con pin y botón directo a tu WhatsApp.
+                            </p>
+                            <div class="sim-features-list" id="simBadges">
+                                <span class="sim-feature-badge">📍 Google Maps 4.9 Destacado</span>
+                                <span class="sim-feature-badge">⚡ Catálogo Rápido Multimarca</span>
+                                <span class="sim-feature-badge">📲 Contacto WhatsApp Inmediato</span>
+                                <span class="sim-feature-badge">🛡️ Filtro de Consultas Frecuentes</span>
+                            </div>
+                        </div>
+
+                        <div class="sim-cta-wrap">
+                            <a id="simCtaBtn" 
+                               href="https://wa.me/5491126731952?text=Hola%20Ruco!%20Tengo%20un%20negocio%20del%20rubro%20Taller%20y%20Repuestos%20y%20quiero%20pedir%20mi%20maqueta%20sin%20cargo." 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="btn-sim-wa">
+                                <span>Pedir Maqueta de este Rubro</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             Proceso Simple en 3 Pasos
+             =================================================================== -->
+        <section class="section section-alt">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Sin Vueltas Ni Riesgos</span>
+                    <h2 class="section-title">¿Cómo trabajamos juntos?</h2>
+                    <p class="section-subtitle">Un proceso claro, ágil y transparente desde el primer mensaje.</p>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-badge">1</div>
+                        <h4>Charlamos 10 minutos</h4>
+                        <p>Nos escribís por WhatsApp contándonos de qué es tu negocio, qué vendés y qué necesitás comunicar.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-badge">2</div>
+                        <h4>Maqueta inicial sin cargo</h4>
+                        <p>Diseño una propuesta web real, interactiva y adaptada a tu identidad para que la pruebes en tu propio celular.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-badge">3</div>
+                        <h4>Lanzamiento & Crecimiento</h4>
+                        <p>Si la propuesta te convence, la conectamos a tu dominio propio, optimizamos Google Maps y queda 100% activa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             Preguntas Frecuentes (Acordeón)
+             =================================================================== -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Dudas Habituales</span>
+                    <h2 class="section-title">Preguntas Frecuentes</h2>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Cómo funciona la maqueta preliminar sin cargo?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Te armo un enlace privado con el diseño real de tu página para que veas cómo se vería en celulares antes de pagar nada. Si te encanta, avanzamos. Si no, no tenés ningún compromiso.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Tengo que pagar mantenimiento mensual obligatorio?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            No. La web es tuya. No cobramos mensualidades forzadas. Si algún día querés renovar fotos, agregar productos o hacer cambios, lo hacés a demanda solo cuando lo necesitás.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Cuánto tiempo tarda en estar lista la web?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            La maqueta inicial está lista en 48 horas. Una vez aprobada con tus textos y fotos finales, la publicación en dominio propio toma entre 5 y 7 días hábiles.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>¿Necesito saber computación para atender los pedidos?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            Para nada. Todo está pensado para que los pedidos y consultas te lleguen directamente a tu WhatsApp habitual como cualquier mensaje común.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="brand-badge">
+                <img src="assets/logo/ruco-infinity-3d.png" alt="Logo Ruco" width="44" height="44">
+            </div>
+
+            <div class="brand-text">
+                <span class="brand-name">ruco<span>.ar</span></span>
+                <span class="brand-tag">Presencia Digital & SEO Local</span>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/rucoweb.ar/" target="_blank" rel="noopener noreferrer" class="footer-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    <span>@rucoweb.ar</span>
+                </a>
+
+                <a href="https://wa.me/5491126731952?text=Hola%20Ruco!%20Te%20escribo%20desde%20la%20web." target="_blank" rel="noopener noreferrer" class="footer-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                    <span>+54 9 11 2673-1952</span>
+                </a>
+            </div>
+
+            <p class="footer-copy">
+                © 2026 Ruco (ruco.ar) · Buenos Aires, Argentina · Hecho a mano con código nativo.
             </p>
-            <a href="https://wa.me/5491125739968?text=Hola%20Ruco!%20Quiero%20sumar%20mi%20negocio%20y%20ver%20una%20maqueta" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-              <span>Pedir Mi Maqueta</span>
+        </div>
+    </footer>
+
+    <!-- Barra Flotante Permanente en Móviles (Thumb-Zone Conversion) -->
+    <aside class="mobile-sticky-bar" aria-label="Contacto Rápido">
+        <div class="mobile-sticky-bar-inner">
+            <a href="https://wa.me/5491126731952?text=Hola%20Ruco!%20Vengo%20desde%20Instagram%20y%20quiero%20pedir%20mi%20maqueta%20sin%20cargo." 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-sticky-wa">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                <span>Pedir Maqueta Sin Cargo</span>
             </a>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- ==========================================================================
-         SECCIÓN: ANTES VS. DESPUÉS (DIAGNÓSTICO EDITORIAL)
-         ========================================================================== -->
-    <section class="section" id="comparativa" style="background: #FFFFFF;">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-badge">El Dilema del Comerciante</span>
-          <h2 class="section-title">¿Por qué tener solo Instagram ya no alcanza?</h2>
-          <p class="section-subtitle">
-            Las redes sociales son excelentes para publicar fotos, pero cuando una persona necesita un servicio en su zona hoy, <strong>abre Google en su teléfono</strong>.
-          </p>
-        </div>
-
-        <div class="comparison-grid reveal">
-          <!-- Columna Antes: Solo Redes Sociales -->
-          <div class="compare-card-soft before">
-            <div class="compare-header">
-              <span class="compare-tag">El Negocio Tradicional</span>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E57373" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-            </div>
-            <h3 class="compare-title">Depender únicamente de Instagram</h3>
-            <ul class="compare-list">
-              <li>
-                <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="#E57373" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                <span><strong>Algoritmo caprichoso:</strong> Tus publicaciones solo se le muestran al 3% de tus seguidores a menos que pagues pauta permanentemente.</span>
-              </li>
-              <li>
-                <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="#E57373" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                <span><strong>Invisible en Google Maps:</strong> Quien busca un taller, comercio o servicio en la zona busca en el mapa y contacta al primero que ve con web.</span>
-              </li>
-              <li>
-                <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="#E57373" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                <span><strong>Falta de solidez institucional:</strong> Sin un dominio propio (<code>.com</code> o <code>.ar</code>), muchos clientes dudan si el comercio sigue activo o formal.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Columna Después: Con Ruco Oficial -->
-          <div class="compare-card-soft after">
-            <div class="compare-header">
-              <span class="compare-tag">Con Ruco Oficial (ruco.ar)</span>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--copper-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="16 12 12 8 8 12"></polyline><line x1="12" y1="16" x2="12" y2="8"></line></svg>
-            </div>
-            <h3 class="compare-title">Un Activo Digital Propio y Duradero</h3>
-            <ul class="compare-list">
-              <li>
-                <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="var(--copper-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Dominio propio oficial:</strong> Tu marca es dueña de su dirección en internet (<code>tunegocio.com.ar</code>) con candado SSL seguro.</span>
-              </li>
-              <li>
-                <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="var(--copper-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Google Maps optimizado de base:</strong> Aparecés destacado en tu barrio con $0 de costo publicitario obligatorio.</span>
-              </li>
-              <li>
-                <svg class="compare-icon" viewBox="0 0 24 24" fill="none" stroke="var(--copper-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Tranquilidad absoluta:</strong> Abono mensual accesible que asegura dominio, hosting ultraveloz y cambios de fotos o precios por chat.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         SECCIÓN: ACCESO A PLANES Y ABONOS (PÁGINA DEDICADA)
-         ========================================================================== -->
-    <section class="section" style="padding: 70px 0;">
-      <div class="container">
-        <div class="pricing-cta-banner reveal">
-          <div class="pricing-cta-content">
-            <span class="section-badge" style="margin-bottom: 14px;">Precios Honestos</span>
-            <h2 class="section-title" style="font-size: clamp(1.9rem, 3.6vw, 2.7rem); margin-bottom: 14px;">
-              Planes Transparentes y a Tu Medida
-            </h2>
-            <p class="section-subtitle" style="max-width: 640px; margin-bottom: 26px;">
-              Sin costos ocultos ni letras chicas. Desarrollos iniciales llave en mano y un abono mensual accesible que cuida y mantiene tu presencia digital.
-            </p>
-            <a href="planes.html" class="btn btn-primary">
-              <span>Ver Todos los Planes y Abonos</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <a href="https://www.instagram.com/rucoweb.ar/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="btn-sticky-ig" 
+               title="Ver Instagram" 
+               aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
             </a>
-          </div>
         </div>
-      </div>
-    </section>
+    </aside>
 
-    <!-- ==========================================================================
-         FORMULARIO DE AUDITORÍA EXPRÉS (LEAD MAGNET)
-         ========================================================================== -->
-    <section class="section">
-      <div class="container">
-        <div class="audit-box-soft reveal">
-          <div class="section-header" style="margin-bottom: 24px;">
-            <span class="section-badge">Sin Compromiso</span>
-            <h2 class="section-title">Auditoría Visual Gratuita para tu Negocio</h2>
-            <p class="section-subtitle">
-              Completá estos 3 datos y te preparamos una maqueta visual de cómo se vería tu comercio en Google y celulares, directo por WhatsApp.
-            </p>
-          </div>
+    <!-- Rama Botánica Inferior Derecha (Acento de Fondo) -->
+    <svg class="botanical-leaf botanical-leaf-br" viewBox="0 0 100 100" fill="none" stroke="#162B25" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M20,80 Q50,45 85,15" />
+        <path d="M85,15 Q60,10 50,30 Q65,35 85,15 Z" />
+        <path d="M62,38 Q38,30 35,50 Q48,52 62,38 Z" />
+        <path d="M44,56 Q25,52 25,68 Q36,68 44,56 Z" />
+    </svg>
 
-          <form class="audit-form" id="auditForm">
-            <div class="form-group">
-              <label class="form-label" for="auditBizName">Nombre de tu comercio o emprendimiento:</label>
-              <input type="text" class="form-input" id="auditBizName" placeholder="Ej: Taller San Cayetano / Estética Lumina" required>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="auditRubro">Rubro o actividad principal:</label>
-              <input type="text" class="form-input" id="auditRubro" placeholder="Ej: Mecánica de motos / Barbería / Venta de indumentaria" required>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="auditStatus">¿Cuál es tu situación digital actual?</label>
-              <select class="form-select" id="auditStatus">
-                <option value="Solo tengo Instagram">Solo tengo Instagram / Facebook</option>
-                <option value="Tengo ficha en Google Maps pero sin web">Tengo ficha en Google Maps pero sin web</option>
-                <option value="No tengo presencia digital todavía">No tengo presencia digital todavía</option>
-                <option value="Tengo una web vieja y lenta que quiero renovar">Tengo una web vieja y lenta que quiero renovar</option>
-              </select>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-full" style="padding: 16px;">
-              <span>Recibir Auditoría & Maqueta por WhatsApp</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         PREGUNTAS FRECUENTES (FAQ INTERACTIVO)
-         ========================================================================== -->
-    <section class="section" id="faq" style="background: #FFFFFF;">
-      <div class="container">
-        <div class="section-header reveal">
-          <span class="section-badge">Respuestas Claras</span>
-          <h2 class="section-title">Preguntas Frecuentes</h2>
-          <p class="section-subtitle">
-            Todo lo que necesitás saber antes de dar el paso hacia la presencia digital formal de tu comercio.
-          </p>
-        </div>
-
-        <div class="faq-container reveal">
-          <!-- FAQ 1 -->
-          <div class="faq-item-soft">
-            <button class="faq-question-btn" type="button">
-              <span>¿Por qué no me alcanza con tener solo mi cuenta de Instagram?</span>
-              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Instagram es excelente para mostrar fotos, pero cuando una persona necesita resolver una urgencia o comprar cerca de su casa, <strong>busca en Google Maps</strong>. Además, el algoritmo de Instagram solo le muestra tus publicaciones a un porcentaje mínimo de tus seguidores a menos que pagues publicidad constantemente. Una web con dominio propio es un activo formal que te pertenece y te posiciona donde la gente busca para comprar.
-              </p>
-            </div>
-          </div>
-
-          <!-- FAQ 2 -->
-          <div class="faq-item-soft">
-            <button class="faq-question-btn" type="button">
-              <span>¿Tengo que saber de computación o programación para tener una web?</span>
-              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                <strong>Absolutamente no.</strong> En Ruco entregamos soluciones "Llave en Mano". Nosotros nos encargamos del registro del dominio, la configuración de servidores, la seguridad SSL, la optimización en Google Maps y la indexación en buscadores. Vos solo te dedicás a responder las consultas de tus clientes en WhatsApp.
-              </p>
-            </div>
-          </div>
-
-          <!-- FAQ 3 -->
-          <div class="faq-item-soft">
-            <button class="faq-question-btn" type="button">
-              <span>¿Qué cubre exactamente el abono mensual de mantenimiento?</span>
-              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Cubre la <strong>renovación anual del dominio oficial (.com o .ar)</strong> para que nunca lo pierdas, el alojamiento en servidores seguros de alta velocidad 24/7 con candadito SSL verde, y las modificaciones periódicas que necesites (actualizar listas de precios, subir fotos de trabajos nuevos, cambiar horarios de atención o poner promociones). Nos mandás los datos por WhatsApp y nosotros lo dejamos listo.
-              </p>
-            </div>
-          </div>
-
-          <!-- FAQ 4 -->
-          <div class="faq-item-soft">
-            <button class="faq-question-btn" type="button">
-              <span>¿Cuánto tiempo tarda en estar lista y funcionando mi web?</span>
-              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Para una Landing Exprés o sitio institucional promedio, el tiempo de entrega habitual es de <strong>3 a 7 días hábiles</strong> una vez que definimos los datos básicos de tu negocio (fotos, textos, teléfonos y horarios). Te mostramos una maqueta previa para que des el visto bueno antes de publicarla oficialmente.
-              </p>
-            </div>
-          </div>
-
-          <!-- FAQ 5 -->
-          <div class="faq-item-soft">
-            <button class="faq-question-btn" type="button">
-              <span>¿Tengo que pagar publicidad en Google obligatoriamente?</span>
-              <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                <strong>No.</strong> Nuestra filosofía es construir un activo orgánico permanente con <strong>$0 de costo en publicidad obligatoria</strong>. La optimización de tu ficha en Google Maps y el SEO técnico vienen incluidos de base. Para aquellos comercios que quieran captar tráfico masivo inmediato, ofrecemos de forma opcional la gestión de Google Ads en el Puesto #1.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ==========================================================================
-       FOOTER OFICIAL
-       ========================================================================== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Columna de Marca -->
-        <div class="footer-brand-col">
-          <div class="footer-avatar-wrap">
-            <img src="assets/logo/rucoweb-avatar.jpg" alt="Ruco Logo" class="footer-avatar-img">
-            <div>
-              <span style="font-weight: 800; font-size: 1.15rem; color: var(--text-pine);">ruco.ar</span>
-              <span style="display:block; font-size: 0.75rem; color: var(--text-muted);">Diseño web moderno</span>
-            </div>
-          </div>
-          <p class="footer-bio">
-            Páginas adaptadas a tu negocio, servicio o institución. 100% pensadas para celulares, con botón de WhatsApp directo y vinculación oficial a Google Maps.
-          </p>
-          <div>
-            <a href="https://instagram.com/rucoweb.ar" target="_blank" rel="noopener noreferrer" style="color:var(--text-pine); display:inline-flex; align-items:center; gap:6px; font-weight:700; font-size:0.88rem;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              <span>Instagram: @rucoweb.ar</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Columna Enlaces Rápidos -->
-        <div>
-          <h4 class="footer-col-title">Navegación</h4>
-          <ul class="footer-links-list">
-            <li><a href="#inicio" class="footer-link-item">Inicio</a></li>
-            <li><a href="#clientes" class="footer-link-item">Nuestros Clientes</a></li>
-            <li><a href="#comparativa" class="footer-link-item">¿Por qué una web?</a></li>
-            <li><a href="planes.html" class="footer-link-item">Planes & Abonos</a></li>
-            <li><a href="#faq" class="footer-link-item">Preguntas Frecuentes</a></li>
-          </ul>
-        </div>
-
-        <!-- Columna Contacto -->
-        <div>
-          <h4 class="footer-col-title">Contacto Directo</h4>
-          <ul class="footer-links-list">
-            <li class="footer-link-item">📍 Buenos Aires, Argentina</li>
-            <li>
-              <a href="https://wa.me/5491125739968" target="_blank" rel="noopener noreferrer" class="footer-link-item" style="color:var(--text-pine); font-weight:700;">
-                📲 +54 9 11 2573-9968 (WhatsApp)
-              </a>
-            </li>
-            <li>
-              <a href="https://instagram.com/rucoweb.ar" target="_blank" rel="noopener noreferrer" class="footer-link-item">
-                📸 Instagram: @rucoweb.ar
-              </a>
-            </li>
-            <li class="footer-link-item">⚡ Respuesta promedio: &lt; 15 min</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Barra Inferior -->
-      <div class="footer-bottom">
-        <div>
-          © 2026 <strong>Ruco</strong> (ruco.ar). Todos los derechos reservados.
-        </div>
-        <div>
-          Desarrollado con HTML5 semántico, CSS moderno y JS nativo. Cero dependencias pesadas.
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ==========================================================================
-       BARRA INFERIOR PARA CELULARES (MOBILE-FIRST)
-       ========================================================================== -->
-  <div class="mobile-bottom-bar" aria-label="Acciones rápidas en celular">
-    <a href="https://wa.me/5491125739968?text=Hola%20Ruco!%20Quiero%20consultar%20por%20una%20p%C3%A1gina%20web" target="_blank" rel="noopener noreferrer" class="bottom-bar-btn bottom-btn-wa">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.886 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-      <span>WhatsApp Directo</span>
-    </a>
-    <a href="https://instagram.com/rucoweb.ar" target="_blank" rel="noopener noreferrer" class="bottom-bar-btn bottom-btn-ig">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-      <span>Instagram</span>
-    </a>
-  </div>
-
-  <!-- Botón Flotante de WhatsApp para Escritorio -->
-  <a href="https://wa.me/5491125739968?text=Hola%20Ruco!%20Quiero%20consultar%20por%20una%20web%20para%20mi%20negocio" target="_blank" rel="noopener noreferrer" class="floating-wa-btn" aria-label="Chatear por WhatsApp">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.886 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-    <span>Consultar por WhatsApp</span>
-  </a>
-
-  <!-- Scripts -->
-  <script src="js/canvas-loop.js"></script>
-  <script src="js/main.js"></script>
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
 </body>
 </html>
