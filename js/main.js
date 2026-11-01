@@ -1,13 +1,109 @@
 /**
  * RUCO (ruco.ar / @rucoweb.ar) — Lógica Interactiva
- * Desarrollado con JavaScript nativo sin dependencias
+ * Desarrollado en JavaScript nativo (sin dependencias pesadas)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initHeroVideo();
+    initCarousel();
     initSimulator();
     initFAQ();
+    initSmartStickyBar();
     initSmoothScroll();
 });
+
+/**
+ * Autoplay silencioso del Reel en celulares
+ */
+function initHeroVideo() {
+    const video = document.getElementById('heroReelVideo');
+    if (!video) return;
+
+    // Intentar reproducir con mute (requisito de navegadores móviles)
+    video.muted = true;
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+        playPromise.catch(() => {
+            // Si el navegador bloquea autoplay, se activa con el primer touch
+            document.body.addEventListener('touchstart', () => {
+                video.play();
+            }, { once: true });
+        });
+    }
+}
+
+/**
+ * Carrusel Interactivo de los 4 Pasos (Slides oficiales de carrousel1)
+ */
+function initCarousel() {
+    const track = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    const dotsContainer = document.getElementById('carouselDots');
+
+    if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
+
+    const slides = track.querySelectorAll('.carousel-slide');
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+
+    // Generar dots indicadores
+    dotsContainer.innerHTML = '';
+    slides.forEach((_, i) => {
+        const dot = document.createElement('div');
+        dot.className = `carousel-dot ${i === 0 ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Ir al paso ${i + 1}`);
+        dot.addEventListener('click', () => goToSlide(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+    function goToSlide(index) {
+        if (index < 0) index = totalSlides - 1;
+        if (index >= totalSlides) index = 0;
+        currentIndex = index;
+
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        dots.forEach((d, i) => {
+            d.classList.toggle('active', i === currentIndex);
+        });
+    }
+
+    prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+    nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+    // Soporte para deslizar con el dedo en pantallas táctiles (Touch Swipe)
+    let startX = 0;
+    let currentX = 0;
+    let isSwiping = false;
+
+    track.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isSwiping = true;
+    }, { passive: true });
+
+    track.addEventListener('touchmove', (e) => {
+        if (!isSwiping) return;
+        currentX = e.touches[0].clientX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', () => {
+        if (!isSwiping) return;
+        isSwiping = false;
+        const diffX = startX - currentX;
+
+        // Umbral de 40px para pasar de slide
+        if (Math.abs(diffX) > 40) {
+            if (diffX > 0) {
+                goToSlide(currentIndex + 1); // Deslizó a la izquierda -> siguiente
+            } else {
+                goToSlide(currentIndex - 1); // Deslizó a la derecha -> anterior
+            }
+        }
+    });
+}
 
 /**
  * Simulador Interactivo de Rubros
@@ -26,31 +122,31 @@ function initSimulator() {
             title: "Taller Mecánico, Repuestos & Accesorios",
             desc: "Como en el caso de GMW Motos: cuando un cliente busca repuestos de urgencia en Google Maps, encuentra tu web al instante con catálogo por marcas, ubicación con pin y botón directo a tu WhatsApp.",
             badges: ["📍 Google Maps 4.9 Destacado", "⚡ Catálogo Rápido Multimarca", "📲 Contacto WhatsApp Inmediato", "🛡️ Filtro de Consultas Frecuentes"],
-            waMsg: "Hola Ruco! Tengo un negocio del rubro Taller y Repuestos de Motos/Autos. Vi el caso de GMW en el Reel y quiero pedir una maqueta sin cargo."
+            waMsg: "Hola Ruco! Tengo un taller / venta de repuestos y vi el caso de GMW. Quiero pedir mi maqueta sin cargo."
         },
         gastro: {
             title: "Gastronomía, Hamburgueserías, Cervecerías & Cafés",
             desc: "Menú interactivo con fotos atractivas, categorización clara y carrito que envía el pedido listo y cotizado directamente al WhatsApp del local. 0% comisiones a apps de delivery.",
             badges: ["🍔 Menú Digital sin App", "🛒 Carrito con Envío a WhatsApp", "🕒 Horarios de Cocina Dinámicos", "💳 0% Comisiones"],
-            waMsg: "Hola Ruco! Tengo un local gastronómico y me interesa tener un menú web propio con carrito para WhatsApp sin pagar comisiones."
+            waMsg: "Hola Ruco! Tengo un local gastronómico y quiero un menú digital con carrito a WhatsApp sin comisiones."
         },
         vivero: {
             title: "Viveros, Jardinería & Tiendas Deco",
             desc: "Galería estética y ordenada de especies de plantas, macetas e insumos, permitiendo que el cliente consulte stock y precios por WhatsApp con una sola captura o clic.",
             badges: ["🌿 Catálogo Botánico Visual", "📸 Galería de Especies", "🚚 Canal de Envíos a Domicilio", "⭐ SEO Local de Zona"],
-            waMsg: "Hola Ruco! Tengo un vivero / tienda de plantas y quiero una web estética y visual para mostrar catálogo y recibir consultas directas."
+            waMsg: "Hola Ruco! Tengo un vivero / tienda de plantas y quiero una web estética para mostrar mi catálogo y recibir pedidos."
         },
         almacen: {
             title: "Almacenes, Fiambrerías & Comercios de Barrio",
             desc: "Tu negocio de confianza ahora con presencia digital: código QR en el mostrador para los vecinos, pizarra de promociones del día y pedidos para retiro o delivery.",
             badges: ["🏷️ Pizarra de Ofertas Semanales", "📱 QR Listo para el Mostrador", "🛵 Pedidos Vecinales por Chat", "📍 Fácil de Encontrar en el Barrio"],
-            waMsg: "Hola Ruco! Tengo un almacén / comercio barrial y quiero una web simple y rápida para que los vecinos me hagan pedidos directo al WhatsApp."
+            waMsg: "Hola Ruco! Tengo un comercio barrial y quiero una web simple para pedidos directos de mis vecinos por WhatsApp."
         },
         servicios: {
             title: "Oficios, Profesionales & Servicios a Domicilio",
             desc: "Tu tarjeta de presentación digital premium: mostrá tus trabajos realizados, testimonios de clientes satisfechos y canalizá presupuestos serios sin perder tiempo.",
             badges: ["💼 Portafolio de Trabajos", "⭐ Testimonios & Calificaciones", "📝 Formulario Exprés a WhatsApp", "🚀 Carga Ultrarrápida en 4G"],
-            waMsg: "Hola Ruco! Ofrezco servicios profesionales y quiero una web sobria y profesional que me ayude a cerrar más presupuestos."
+            waMsg: "Hola Ruco! Ofrezco servicios profesionales y quiero una web sobria para cerrar más presupuestos."
         }
     };
 
@@ -62,11 +158,9 @@ function initSimulator() {
             const info = dataByRubro[rubro];
             if (!info) return;
 
-            // Actualizar botones activos
             tabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
 
-            // Actualizar contenido con fade sutil
             titleEl.style.opacity = '0';
             descEl.style.opacity = '0';
             badgesWrap.style.opacity = '0';
@@ -75,7 +169,6 @@ function initSimulator() {
                 titleEl.textContent = info.title;
                 descEl.textContent = info.desc;
                 
-                // Limpiar y cargar nuevos badges
                 badgesWrap.innerHTML = '';
                 info.badges.forEach(b => {
                     const span = document.createElement('span');
@@ -84,10 +177,8 @@ function initSimulator() {
                     badgesWrap.appendChild(span);
                 });
 
-                // Actualizar botón de WhatsApp
                 const encodedMsg = encodeURIComponent(info.waMsg);
                 ctaBtn.href = `https://wa.me/${waPhone}?text=${encodedMsg}`;
-                ctaBtn.innerHTML = `<span>Pedir Maqueta de este Rubro</span> <span>→</span>`;
 
                 titleEl.style.opacity = '1';
                 descEl.style.opacity = '1';
@@ -96,7 +187,6 @@ function initSimulator() {
         });
     });
 
-    // Iniciar transiciones suaves
     [titleEl, descEl, badgesWrap].forEach(el => {
         el.style.transition = 'opacity 0.2s ease';
     });
@@ -113,16 +203,28 @@ function initFAQ() {
 
         questionBtn.addEventListener('click', () => {
             const isOpen = item.classList.contains('open');
-            
-            // Cerrar otros
             faqItems.forEach(other => {
                 if (other !== item) other.classList.remove('open');
             });
-
-            // Toggle actual
             item.classList.toggle('open', !isOpen);
         });
     });
+}
+
+/**
+ * Barra Flotante Inteligente: Aparece sólo cuando el usuario scrollea
+ */
+function initSmartStickyBar() {
+    const stickyBar = document.querySelector('.mobile-sticky-bar');
+    if (!stickyBar) return;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 380) {
+            stickyBar.classList.add('visible');
+        } else {
+            stickyBar.classList.remove('visible');
+        }
+    }, { passive: true });
 }
 
 /**

@@ -27,10 +27,9 @@
 </head>
 <body>
 
-    <!-- Acentos Botánicos de Fondo (Extraídos del Branding Kit oficial RucoCM) -->
-    <img src="assets/elements/branch-olive.png" alt="" class="leaf-accent leaf-top-left" aria-hidden="true">
-    <img src="assets/elements/branch-olive.png" alt="" class="leaf-accent leaf-bottom-right" aria-hidden="true">
-    <img src="assets/elements/botanical-hanging.png" alt="" class="hanging-accent" aria-hidden="true">
+    <!-- Acentos Botánicos de Fondo del Branding Kit -->
+    <img src="assets/elements/branch-olive.png" alt="" class="hero-botanical-left" aria-hidden="true">
+    <img src="assets/elements/branch-olive.png" alt="" class="hero-botanical-right" aria-hidden="true">
 
     <!-- Header / Barra Fija -->
     <header class="site-header">
@@ -65,61 +64,121 @@
 
     <main>
         <!-- ===================================================================
-             Hero Section: Quiet Luxury & Warm Editorial
+             Hero Section: Quiet Luxury con el Mockup del Reel y Sticker Oficial
              =================================================================== -->
         <section class="hero-section" id="inicio">
-            <div class="container hero-inner">
-                <div class="hero-pill">
-                    <span>✦</span> Boutique Digital & SEO Local a Medida
+            <div class="container hero-grid">
+                <!-- Columna Izquierda: Mensaje y Conversión -->
+                <div class="hero-content">
+                    <div class="hero-pill">
+                        <span>✦</span> Boutique Digital & SEO Local a Medida
+                    </div>
+
+                    <h1 class="hero-title">
+                        Tu historia digital,<br>
+                        <em>cuidadosamente diseñada.</em>
+                    </h1>
+
+                    <p class="hero-description">
+                        Desarrollamos páginas web artesanales, ultrarrápidas y <strong>100% pensadas para celulares</strong>. Conectamos tu comercio con clientes decididos en tu zona mediante <strong>Google Maps</strong> y consultas directas a tu <strong>WhatsApp</strong> sin intermediarios.
+                    </p>
+
+                    <!-- Botonera Única y Elegante del Hero -->
+                    <div class="hero-action-group">
+                        <a href="https://wa.me/5491126731952?text=Hola%20Ruco!%20Vengo%20desde%20Instagram%20y%20quiero%20pedir%20mi%20maqueta%20sin%20cargo%20para%20mi%20negocio." 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn-hero-primary">
+                            <span>✦ Solicitar Maqueta Sin Cargo</span>
+                            <span>→</span>
+                        </a>
+
+                        <a href="#clientes" class="link-hero-subtle">
+                            <span>Ver Clientes en Vivo</span>
+                            <span>↓</span>
+                        </a>
+                    </div>
+
+                    <!-- Tickers de Confianza -->
+                    <div class="hero-trust-bar">
+                        <div class="trust-item">
+                            <span>⚡ Carga en &lt; 1 segundo</span>
+                        </div>
+                        <div class="trust-item">
+                            <span>📍 Google Maps 4.9</span>
+                        </div>
+                        <div class="trust-item">
+                            <span>💬 1 toque a WhatsApp</span>
+                        </div>
+                    </div>
                 </div>
 
-                <h1 class="hero-title">
-                    Tu historia digital,<br>
-                    <em>cuidadosamente diseñada.</em>
-                </h1>
+                <!-- Columna Derecha: Mockup del Celular con el Reel Real y Sticker Oficial -->
+                <div class="hero-visual-wrap">
+                    <!-- Sticker "Nuevo Reel" en la esquina -->
+                    <img src="assets/elements/sticker-peel-reel.png" alt="Nuevo Reel" class="sticker-peel" width="110" height="auto">
 
-                <p class="hero-description">
-                    Desarrollamos páginas web artesanales, ultrarrápidas y <strong>100% pensadas para celulares</strong>. Conectamos tu comercio o servicio con clientes decididos en tu zona mediante <strong>Google Maps</strong> y consultas directas a tu <strong>WhatsApp</strong> sin intermediarios.
-                </p>
+                    <!-- Rama botánica envolvente -->
+                    <img src="assets/elements/branch-olive.png" alt="" class="phone-botanical-wrap" aria-hidden="true">
 
-                <!-- Botonera Única y Limpia (Sin Repeticiones) -->
-                <div class="hero-action-group">
-                    <a href="https://wa.me/5491126731952?text=Hola%20Ruco!%20Vengo%20desde%20Instagram%20y%20quiero%20pedir%20mi%20maqueta%20sin%20cargo%20para%20mi%20negocio." 
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       class="btn-luxury-primary">
-                        <span>✦ Solicitar Maqueta Sin Cargo</span>
-                        <span>→</span>
-                    </a>
-
-                    <a href="#clientes" class="link-luxury-subtle">
-                        <span>Ver Clientes en Vivo</span>
-                        <span>↓</span>
-                    </a>
-                </div>
-
-                <!-- Tickers de Confianza Sutiles -->
-                <div class="hero-trust-bar">
-                    <div class="trust-item">
-                        <span>⚡ Carga en menos de 1 segundo</span>
-                    </div>
-                    <div class="trust-item">
-                        <span>📍 SEO Google Maps 4.9</span>
-                    </div>
-                    <div class="trust-item">
-                        <span>💬 1 toque a tu WhatsApp</span>
-                    </div>
-                    <div class="trust-item">
-                        <span>🛡️ Sin abonos mensuales obligatorios</span>
+                    <!-- Mockup de Teléfono con el Reel Oficial -->
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <video id="heroReelVideo" class="phone-video" autoplay loop muted playsinline poster="assets/projects/gmw-fachada.jpg">
+                            <source src="assets/video/reel-gmw.mp4" type="video/mp4">
+                            Tu navegador no soporta video HTML5.
+                        </video>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ===================================================================
-             Nuestros Clientes en Vivo (Showcase con Esquinas Botánicas)
+             Los 4 Pasos: Carrusel Interactivo con los Slides Reales (RucoCM)
              =================================================================== -->
-        <section class="section" id="clientes">
+        <section class="section" id="metodo">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Guía Paso a Paso</span>
+                    <h2 class="section-title">De cero a tu negocio en Google en 4 pasos</h2>
+                    <p class="section-subtitle">Deslizá con el dedo para conocer cómo transformamos tu negocio paso a paso.</p>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <div class="carousel-viewport">
+                        <div class="carousel-track" id="carouselTrack">
+                            <div class="carousel-slide">
+                                <img src="assets/carrousel/0.png" alt="De cero a tu negocio en Google en 4 pasos" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/carrousel/1.png" alt="Paso 01: Charla y Relevamiento" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/carrousel/3.png" alt="Paso 02: Diseño a Medida" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/carrousel/4.png" alt="Paso 03: Revisión y Visto Bueno" loading="lazy">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/carrousel/2.png" alt="Paso 04: Lanzamiento Oficial" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Controles del Carrusel -->
+                    <div class="carousel-controls">
+                        <button class="carousel-nav-btn" id="carouselPrev" aria-label="Slide anterior">←</button>
+                        <div class="carousel-dots" id="carouselDots"></div>
+                        <button class="carousel-nav-btn" id="carouselNext" aria-label="Siguiente slide">→</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================================================
+             Showcase de Clientes en Vivo (Con Esquinas Botánicas)
+             =================================================================== -->
+        <section class="section section-alt" id="clientes">
             <div class="container">
                 <div class="section-header">
                     <span class="section-eyebrow">Trabajos Reales</span>
@@ -227,9 +286,9 @@
         </section>
 
         <!-- ===================================================================
-             El Método RUCO: 3 Pilares con los Iconos del Reel
+             El Método RUCO: 3 Tarjetas con los Iconos del Reel
              =================================================================== -->
-        <section class="section section-alt">
+        <section class="section">
             <div class="container">
                 <div class="section-header">
                     <span class="section-eyebrow">La Estrategia</span>
@@ -241,7 +300,7 @@
                     <!-- Pilar 1: Búsqueda con Urgencia -->
                     <div class="pillar-card">
                         <div class="pillar-icon-box">
-                            <img src="assets/elements/icon-google-maps.png" alt="Icono Google Maps" width="36" height="36">
+                            <img src="assets/elements/icon-google-maps.png" alt="Icono Google Maps" width="34" height="34">
                         </div>
                         <h3 class="pillar-title">Búsqueda en Google Maps</h3>
                         <p class="pillar-desc">
@@ -252,7 +311,7 @@
                     <!-- Pilar 2: Carga Instantánea en Celulares -->
                     <div class="pillar-card">
                         <div class="pillar-icon-box">
-                            <img src="assets/elements/icon-phone-direct.png" alt="Icono Teléfono Rápido" width="36" height="36">
+                            <img src="assets/elements/icon-phone-direct.png" alt="Icono Teléfono Rápido" width="34" height="34">
                         </div>
                         <h3 class="pillar-title">Carga en Menos de 1 Segundo</h3>
                         <p class="pillar-desc">
@@ -263,51 +322,12 @@
                     <!-- Pilar 3: De la Visita al WhatsApp -->
                     <div class="pillar-card">
                         <div class="pillar-icon-box">
-                            <img src="assets/elements/icon-process-steps.png" alt="Icono Proceso Directo" width="36" height="36">
+                            <img src="assets/elements/icon-process-steps.png" alt="Icono Proceso Directo" width="34" height="34">
                         </div>
                         <h3 class="pillar-title">Del Clic al WhatsApp</h3>
                         <p class="pillar-desc">
                             Sin formularios eternos ni registros engorrosos. La página guía al visitante hacia una conversación de venta real, directa a tu número de WhatsApp con un mensaje pre-armado y claro.
                         </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================================================================
-             Proceso en 4 Pasos: Inspirado en el Carrusel Oficial (RucoCM)
-             =================================================================== -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-eyebrow">Guía Paso a Paso</span>
-                    <h2 class="section-title">De cero a tu negocio en Google en 4 pasos</h2>
-                    <p class="section-subtitle">Un proceso claro, artesanal y sin necesidad de saber de computación.</p>
-                </div>
-
-                <div class="steps-editorial-grid">
-                    <div class="step-editorial-card">
-                        <span class="step-number-tag">01</span>
-                        <h4>Charla & Relevamiento</h4>
-                        <p>Nos contás de qué trata tu rubro, qué servicios querés destacar y nos enviás tus fotos o datos por WhatsApp.</p>
-                    </div>
-
-                    <div class="step-editorial-card">
-                        <span class="step-number-tag">02</span>
-                        <h4>Diseño a Medida</h4>
-                        <p>Armamos la maqueta visual optimizada 100% para celulares con botones directos y catálogo a tu medida.</p>
-                    </div>
-
-                    <div class="step-editorial-card">
-                        <span class="step-number-tag">03</span>
-                        <h4>Revisión & Visto Bueno</h4>
-                        <p>Te enviamos el enlace para que la navegues desde tu celular. Ajustamos textos, fotos o detalles juntos.</p>
-                    </div>
-
-                    <div class="step-editorial-card">
-                        <span class="step-number-tag">04</span>
-                        <h4>Lanzamiento Oficial</h4>
-                        <p>Conectamos tu dominio, activamos tu Google Maps e indexamos tu web en Google para que tus clientes te encuentren.</p>
                     </div>
                 </div>
             </div>
@@ -446,13 +466,13 @@
         </div>
     </footer>
 
-    <!-- Barra Flotante Permanente en Móviles: 1 Solo Botón de Lujo -->
+    <!-- Barra Flotante Permanente Inteligente en Móviles (Aparece tras scrollear el Hero) -->
     <aside class="mobile-sticky-bar" aria-label="Contacto Rápido">
         <a href="https://wa.me/5491126731952?text=Hola%20Ruco!%20Vengo%20desde%20Instagram%20y%20quiero%20pedir%20mi%20maqueta%20sin%20cargo." 
            target="_blank" 
            rel="noopener noreferrer" 
            class="btn-sticky-single">
-            <span>✦ Solicitar Maqueta Sin Cargo por WhatsApp</span>
+            <span>✦ Solicitar Maqueta Sin Cargo</span>
         </a>
     </aside>
 
