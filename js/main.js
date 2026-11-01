@@ -19,12 +19,10 @@ function initHeroVideo() {
     const video = document.getElementById('heroReelVideo');
     if (!video) return;
 
-    // Intentar reproducir con mute (requisito de navegadores móviles)
     video.muted = true;
     const playPromise = video.play();
     if (playPromise !== undefined) {
         playPromise.catch(() => {
-            // Si el navegador bloquea autoplay, se activa con el primer touch
             document.body.addEventListener('touchstart', () => {
                 video.play();
             }, { once: true });
@@ -47,7 +45,6 @@ function initCarousel() {
     const totalSlides = slides.length;
     let currentIndex = 0;
 
-    // Generar dots indicadores
     dotsContainer.innerHTML = '';
     slides.forEach((_, i) => {
         const dot = document.createElement('div');
@@ -74,7 +71,7 @@ function initCarousel() {
     prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
     nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
 
-    // Soporte para deslizar con el dedo en pantallas táctiles (Touch Swipe)
+    // Soporte táctil fluido (Touch Swipe)
     let startX = 0;
     let currentX = 0;
     let isSwiping = false;
@@ -94,12 +91,11 @@ function initCarousel() {
         isSwiping = false;
         const diffX = startX - currentX;
 
-        // Umbral de 40px para pasar de slide
         if (Math.abs(diffX) > 40) {
             if (diffX > 0) {
-                goToSlide(currentIndex + 1); // Deslizó a la izquierda -> siguiente
+                goToSlide(currentIndex + 1);
             } else {
-                goToSlide(currentIndex - 1); // Deslizó a la derecha -> anterior
+                goToSlide(currentIndex - 1);
             }
         }
     });
@@ -212,14 +208,14 @@ function initFAQ() {
 }
 
 /**
- * Barra Flotante Inteligente: Aparece sólo cuando el usuario scrollea
+ * Barra Flotante Inteligente: Aparece sólo cuando el usuario scrollea después del hero
  */
 function initSmartStickyBar() {
     const stickyBar = document.querySelector('.mobile-sticky-bar');
     if (!stickyBar) return;
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 380) {
+        if (window.scrollY > 480) {
             stickyBar.classList.add('visible');
         } else {
             stickyBar.classList.remove('visible');
