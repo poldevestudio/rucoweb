@@ -1,58 +1,58 @@
 # Ruco (ruco.ar / @rucoweb.ar) 🌿🌐
-### Presencia Digital, Cuidadosamente Diseñada
+### Presencia Digital, Cuidadosamente Diseñada · Quiet Luxury
 
-Sitio web oficial, landing de conversión y página de presentación (Bio Link) desarrollada a medida para **Ruco** ([@rucoweb.ar](https://www.instagram.com/rucoweb.ar/)). Diseñado específicamente para recibir el tráfico de usuarios que llegan desde Instagram y Reels en sus teléfonos celulares y convertirlos en consultas directas a WhatsApp.
-
----
-
-## 🎨 Identidad & Dirección de Arte ("Soft Editorial Warm")
-
-A partir del perfil y feed de Instagram de `@rucoweb.ar` y del Reel de presentación, la web implementa una estética de **lujo cálido y sereno ("Quiet Luxury / Warm Editorial")**:
-
-- **Fondo:** Blanco cremita y leche tostada (`#FAF6F0`, `#F3EBE1`).
-- **Tipografía Editorial:** Encabezados en `Playfair Display` serif de alta gama con sutiles acentos en itálica terracota (`#B8693E`).
-- **Tipografía de Lectura:** `Plus Jakarta Sans` para máxima legibilidad en pantallas AMOLED/OLED.
-- **Detalles Botánicos:** Trazos lineales de hojas botánicas en las esquinas y destellos de estrella (`✦`), manteniendo la atmósfera orgánica del feed.
-- **Isotipo:** Insignia circular con el símbolo infinito 3D cromado con sutil sombra y micro-interacción.
+Sitio web oficial, landing de conversión y página de presentación (Bio Link) desarrollada para **Ruco** ([@rucoweb.ar](https://www.instagram.com/rucoweb.ar/)). Diseñado con estética **Quiet Luxury**, inspirado directamente en el Branding Kit oficial de Reels & Carousels (`RucoCM`).
 
 ---
 
-## 🚀 Arquitectura & Funcionalidades
+## 🎨 Dirección de Arte "Quiet Luxury" & Elementos Reales de Marca
 
-1. **Header Sticky & Chip de Disponibilidad:**
-   - Muestra el estado activo en tiempo real (`● Maquetas sin cargo disponibles`).
-   - Botón directo de contacto por WhatsApp.
+A partir del kit de diseño de Instagram (`elementos.jpg`, `elementosnegros.jpg` y los Reels oficiales), la web incorpora:
 
-2. **Hero de Alta Conversión (Mobile-First):**
-   - Titular central: *"Tu historia digital, cuidadosamente diseñada."*
-   - Botones rápidos estilo Bio-Link: *Pedir Maqueta Sin Cargo por WhatsApp*, *Ver Clientes en Vivo* e *Instagram oficial*.
-   - Barra de confianza: Carga < 1s, SEO Google Maps 4.9, WhatsApp directo y 0 abonos obligatorios.
+1. **Paleta Serene & Warm Minimalist:**
+   - Fondo sedoso blanco cremita (`#FAF6F0`, `#F3ECE2`).
+   - Tinta bosque profunda (`#162B25`) y gris botánico suave (`#5B6D66`).
+   - Acentos en terracota arcilla (`#B8693E`) y verde salvia (`#607462`).
 
-3. **Showcase Interactivo: Clientes en Vivo:**
-   - **GMW Motos** (`gmwmotos.com`): El caso de estudio del Reel (repuestos urgentes, Google Maps y WhatsApp en 15 seg).
-   - **Almacén PH** (`almacenph.com`): Almacén de barrio con pizarra de ofertas y QR en mostrador.
-   - **Vivero Vía Verde**: Catálogo botánico visual y pedidos por chat.
-   - **RUCO Burger & Beer**: Menú interactivo con carrito de compras directo a WhatsApp sin comisiones.
+2. **Elementos Vectoriales & Botánicos Extraídos:**
+   - Ramas de olivo y enredaderas colgantes translúcidas en esquinas.
+   - Esquinas enmarcadas botánicas en las tarjetas de proyectos (`corner-tr.png`, `corner-bl.png`).
+   - Iconografía de línea auténtica del Reel:
+     - 📍 `icon-google-maps.png` (Mapa con pin y lupa para SEO Local).
+     - 📱 `icon-phone-direct.png` (Celular con notificaciones y mensaje WhatsApp).
+     - 📖 `icon-process-steps.png` (Libreta de relevamiento y pasos ágiles).
 
-4. **El Método RUCO (Inspirado en el Reel):**
-   - 3 tarjetas estratégicas que explican por qué una web propia conectada a Google Maps supera con creces a tener solamente un perfil de Instagram.
+3. **Sin Botoneras Repetitivas (Diseño Limpio & Singular):**
+   - Se eliminaron las botoneras dobles o saturadas.
+   - **Hero:** Un único botón de prestigio: `✦ Solicitar Maqueta Sin Cargo →` acompañado de un enlace discreto de exploración.
+   - **Showcase:** Una sola acción clara por cliente: `Visitar Sitio Web ↗`.
+   - **Barra Móvil Flotante:** Una sola pastilla táctil en la zona del pulgar (`✦ Solicitar Maqueta Sin Cargo por WhatsApp`), ultra elegante y sin estorbar el contenido.
 
-5. **Micro-Simulador de Rubros en Vivo:**
-   - Herramienta interactiva sin dependencias donde el comerciante elige su rubro (Taller, Gastronomía, Vivero, Almacén, Servicios) y la tarjeta actualiza la propuesta y pre-redacta el mensaje de WhatsApp.
+---
 
-6. **Proceso en 3 Pasos (Sin Riesgo):**
-   - Charlamos 10 minutos → Maqueta preliminar en 48hs sin costo → Publicación final.
+## 🚀 Estructura Estratégica
 
-7. **Preguntas Frecuentes (Acordeón):**
-   - Resolución de objeciones comerciales comunes (costo de mantenimiento, tiempos, facilidad de uso).
-
-8. **Barra Móvil Flotante Inferior (Thumb-Zone):**
-   - Botón permanente en la zona del pulgar en móviles para solicitar la maqueta sin cargo en cualquier momento de la navegación.
+1. **Header:** Marca `ruco.ar`, chip en vivo de disponibilidad y enlace sutil a WhatsApp.
+2. **Hero Editorial:** *"Tu historia digital, cuidadosamente diseñada."* con tickers de carga rápida y SEO local.
+3. **Showcase en Vivo:**
+   - **GMW Motos** (con insignia `🎬 Caso del Reel`).
+   - **Almacén PH** (almacén de barrio con QR en mostrador).
+   - **Vivero Vía Verde** (catálogo botánico visual).
+   - **RUCO Burger & Beer** (menú interactivo con carrito a WhatsApp).
+4. **El Método RUCO (Inspirado en el Reel):** Los 3 motivos por los que tener solo redes hace perder ventas (Búsqueda en Maps, Carga < 1s, Del Clic al WhatsApp).
+5. **Guía en 4 Pasos (Del Carrusel de Instagram):**
+   - 01. Charla & Relevamiento.
+   - 02. Diseño a Medida.
+   - 03. Revisión & Visto Bueno.
+   - 04. Lanzamiento Oficial en Google.
+6. **Micro-Simulador Interactivo:** Diagnóstico instantáneo por rubro con propuesta y mensaje pre-armado.
+7. **Preguntas Frecuentes:** Acordeón interactivo para resolver objeciones (mantenimiento, dominio, tiempos).
+8. **Footer & Barra Flotante:** Cierre limpio y contacto accesible en todo momento.
 
 ---
 
 ## 🛠️ Stack Tecnológico
-- **HTML5 Semántico**: Accesible, preparado para SEO y etiquetas OpenGraph para compartir en WhatsApp e Instagram.
-- **CSS3 Moderno**: Variables nativas, Flexbox, CSS Grid, tipografía fluida con `clamp()`, backdrop-filter blur.
-- **JavaScript Vanilla (ES6+)**: Lógica del simulador, acordeón FAQ y scroll suave sin jQuery ni librerías pesadas.
-- **Rendimiento**: Peso ultra ligero, 100% responsive y carga en menos de 1 segundo en redes móviles 4G.
+- **HTML5 Semántico**: Metadatos SEO, OpenGraph para compartir en WhatsApp e Instagram.
+- **CSS3 Moderno**: Variables personalizadas, tipografía fluida con `clamp()`, backdrop-filter blur.
+- **JavaScript Vanilla**: Lógica de simulador, acordeón FAQ y smooth scroll sin librerías pesadas.
+- **Carga Instantánea**: Menos de 1 segundo en 4G.
