@@ -122,7 +122,7 @@ button {
 .fixed-botanical {
     position: absolute;
     pointer-events: none;
-    opacity: 0.10;
+    opacity: 0.18;
     filter: grayscale(100%);
     user-select: none;
     transition: opacity 0.3s ease;
@@ -132,6 +132,14 @@ button {
     top: 70px;
     left: -20px;
     width: 170px;
+}
+
+.fixed-botanical.top-center {
+    top: 14vh;
+    left: 32%;
+    width: 110px;
+    opacity: 0.14;
+    transform: rotate(-18deg);
 }
 
 .fixed-botanical.top-right {
@@ -145,6 +153,14 @@ button {
     top: 45vh;
     left: -15px;
     width: 150px;
+}
+
+.fixed-botanical.mid-center {
+    top: 58vh;
+    right: 28%;
+    width: 120px;
+    opacity: 0.14;
+    transform: rotate(20deg);
 }
 
 .fixed-botanical.mid-right {
@@ -316,7 +332,8 @@ button {
     top: 20px;
     left: -20px;
     width: 150px;
-    opacity: 0.18;
+    opacity: 0.22;
+    filter: grayscale(100%);
     pointer-events: none;
     z-index: 0;
 }
@@ -326,7 +343,8 @@ button {
     top: 40px;
     right: -20px;
     width: 150px;
-    opacity: 0.18;
+    opacity: 0.22;
+    filter: grayscale(100%);
     pointer-events: none;
     z-index: 0;
     transform: rotate(140deg);
@@ -1152,13 +1170,20 @@ button {
     }
 
     .fixed-botanical {
-        opacity: 0.07;
+        opacity: 0.14;
     }
 
     .fixed-botanical.top-left {
         width: 110px;
         left: -15px;
         top: 65px;
+    }
+
+    .fixed-botanical.top-center {
+        width: 80px;
+        left: 28%;
+        top: 18vh;
+        opacity: 0.11;
     }
 
     .fixed-botanical.top-right {
@@ -1170,6 +1195,13 @@ button {
     .fixed-botanical.mid-left {
         width: 95px;
         left: -10px;
+    }
+
+    .fixed-botanical.mid-center {
+        width: 85px;
+        right: 24%;
+        top: 58vh;
+        opacity: 0.11;
     }
 
     .fixed-botanical.mid-right {
@@ -1230,13 +1262,15 @@ button {
     .hero-botanical-left {
         width: 100px;
         left: -10px;
-        opacity: 0.12;
+        opacity: 0.16;
+        filter: grayscale(100%);
     }
 
     .hero-botanical-right {
         width: 100px;
         right: -10px;
-        opacity: 0.12;
+        opacity: 0.16;
+        filter: grayscale(100%);
     }
 
     .hero-grid {
