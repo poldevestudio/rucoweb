@@ -57,8 +57,8 @@ function initCarousel() {
     const dots = dotsContainer.querySelectorAll('.carousel-dot');
 
     function goToSlide(index) {
-        if (index < 0) index = totalSlides - 1;
-        if (index >= totalSlides) index = 0;
+        if (index < 0) index = 0;
+        if (index >= totalSlides) index = totalSlides - 1;
         currentIndex = index;
 
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -66,40 +66,69 @@ function initCarousel() {
         dots.forEach((d, i) => {
             d.classList.toggle('active', i === currentIndex);
         });
+
+        prevBtn.style.opacity = currentIndex === 0 ? '0.35' : '1';
+        prevBtn.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
+        nextBtn.style.opacity = currentIndex === totalSlides - 1 ? '0.35' : '1';
+        nextBtn.style.pointerEvents = currentIndex === totalSlides - 1 ? 'none' : 'auto';
     }
 
-    prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
-    nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) goToSlide(currentIndex - 1);
+    });
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < totalSlides - 1) goToSlide(currentIndex + 1);
+    });
 
-    // Soporte táctil fluido (Touch Swipe)
+    // Soporte táctil inteligente (Touch Swipe discriminando scroll vertical)
     let startX = 0;
+    let startY = 0;
     let currentX = 0;
+    let currentY = 0;
     let isSwiping = false;
 
     track.addEventListener('touchstart', (e) => {
+        if (!e.touches || e.touches.length === 0) return;
         startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
         currentX = startX;
+        currentY = startY;
         isSwiping = true;
     }, { passive: true });
 
     track.addEventListener('touchmove', (e) => {
-        if (!isSwiping) return;
+        if (!isSwiping || !e.touches || e.touches.length === 0) return;
         currentX = e.touches[0].clientX;
+        currentY = e.touches[0].clientY;
     }, { passive: true });
 
     track.addEventListener('touchend', () => {
         if (!isSwiping) return;
         isSwiping = false;
         const diffX = startX - currentX;
+        const diffY = startY - currentY;
 
-        if (Math.abs(diffX) > 40) {
+        // Si el usuario se movió más en vertical que en horizontal, estaba haciendo scroll: NO saltar slides
+        if (Math.abs(diffY) > Math.abs(diffX)) {
+            return;
+        }
+
+        // Gesto horizontal intencional
+        if (Math.abs(diffX) > 45) {
             if (diffX > 0) {
-                goToSlide(currentIndex + 1);
+                if (currentIndex < totalSlides - 1) {
+                    goToSlide(currentIndex + 1);
+                }
             } else {
-                goToSlide(currentIndex - 1);
+                if (currentIndex > 0) {
+                    goToSlide(currentIndex - 1);
+                }
             }
         }
-    });
+    }, { passive: true });
+
+    // Estado inicial en la foto 1 fija
+    goToSlide(0);
 }
 
 /**

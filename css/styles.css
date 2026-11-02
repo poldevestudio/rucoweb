@@ -112,76 +112,52 @@ button {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
     z-index: 0;
     overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
 }
 
 .fixed-botanical {
     position: absolute;
     pointer-events: none;
-    opacity: 0.18;
+    opacity: 0.16;
     filter: grayscale(100%);
     user-select: none;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
     transition: opacity 0.3s ease;
 }
 
-.fixed-botanical.top-left {
-    top: 70px;
-    left: -20px;
-    width: 170px;
-}
+/* Fila Superior (0% - 22%) */
+.fixed-botanical.b-1  { top: 5%;  left: -20px; width: 150px; }
+.fixed-botanical.b-2  { top: 7%;  left: 28%;   width: 120px; transform: rotate(15deg); }
+.fixed-botanical.b-3  { top: 4%;  left: 60%;   width: 95px;  transform: rotate(-12deg); }
+.fixed-botanical.b-4  { top: 8%;  right: -20px; width: 140px; transform: rotate(135deg); }
 
-.fixed-botanical.top-center {
-    top: 14vh;
-    left: 32%;
-    width: 110px;
-    opacity: 0.14;
-    transform: rotate(-18deg);
-}
+/* Fila Media Superior (25% - 48%) */
+.fixed-botanical.b-5  { top: 27%; left: -15px; width: 130px; }
+.fixed-botanical.b-6  { top: 31%; left: 42%;   width: 100px; transform: rotate(25deg); }
+.fixed-botanical.b-7  { top: 29%; right: -18px; width: 140px; transform: scaleX(-1) rotate(15deg); }
 
-.fixed-botanical.top-right {
-    top: 130px;
-    right: -25px;
-    width: 160px;
-    transform: rotate(135deg);
-}
+/* Fila Media Inferior (50% - 72%) */
+.fixed-botanical.b-8  { top: 51%; left: -15px; width: 105px; transform: rotate(-20deg); }
+.fixed-botanical.b-9  { top: 53%; left: 24%;   width: 95px;  transform: rotate(10deg); }
+.fixed-botanical.b-10 { top: 50%; left: 66%;   width: 125px; transform: rotate(-30deg); }
+.fixed-botanical.b-11 { top: 48%; right: -15px; width: 120px; }
 
-.fixed-botanical.mid-left {
-    top: 45vh;
-    left: -15px;
-    width: 150px;
-}
-
-.fixed-botanical.mid-center {
-    top: 58vh;
-    right: 28%;
-    width: 120px;
-    opacity: 0.14;
-    transform: rotate(20deg);
-}
-
-.fixed-botanical.mid-right {
-    top: 55vh;
-    right: -15px;
-    width: 130px;
-}
-
-.fixed-botanical.btm-left {
-    bottom: 40px;
-    left: -20px;
-    width: 150px;
-    transform: rotate(45deg);
-}
-
-.fixed-botanical.btm-right {
-    bottom: 60px;
-    right: -20px;
-    width: 160px;
-    transform: scaleX(-1) rotate(20deg);
-}
+/* Fila Inferior (75% - 95%) */
+.fixed-botanical.b-12 { top: 74%; left: -20px; width: 150px; transform: rotate(35deg); }
+.fixed-botanical.b-13 { top: 76%; left: 44%;   width: 100px; transform: rotate(-15deg); }
+.fixed-botanical.b-14 { top: 75%; right: -20px; width: 135px; transform: rotate(120deg); }
 
 /* ==========================================================================
    Header Fijo & Minimalista (Permanente Arriba)
@@ -1170,54 +1146,27 @@ button {
     }
 
     .fixed-botanical {
-        opacity: 0.14;
+        opacity: 0.12;
     }
 
-    .fixed-botanical.top-left {
-        width: 110px;
-        left: -15px;
-        top: 65px;
-    }
+    /* Escalado armónico para pantallas de celular */
+    .fixed-botanical.b-1  { width: 105px; left: -15px; }
+    .fixed-botanical.b-2  { width: 85px;  left: 24%; }
+    .fixed-botanical.b-3  { width: 70px;  left: 58%; }
+    .fixed-botanical.b-4  { width: 95px;  right: -15px; }
 
-    .fixed-botanical.top-center {
-        width: 80px;
-        left: 28%;
-        top: 18vh;
-        opacity: 0.11;
-    }
+    .fixed-botanical.b-5  { width: 90px;  left: -12px; }
+    .fixed-botanical.b-6  { width: 75px;  left: 40%; }
+    .fixed-botanical.b-7  { width: 95px;  right: -14px; }
 
-    .fixed-botanical.top-right {
-        width: 105px;
-        right: -15px;
-        top: 140px;
-    }
+    .fixed-botanical.b-8  { width: 75px;  left: -12px; }
+    .fixed-botanical.b-9  { width: 70px;  left: 20%; }
+    .fixed-botanical.b-10 { width: 85px;  left: 62%; }
+    .fixed-botanical.b-11 { width: 85px;  right: -12px; }
 
-    .fixed-botanical.mid-left {
-        width: 95px;
-        left: -10px;
-    }
-
-    .fixed-botanical.mid-center {
-        width: 85px;
-        right: 24%;
-        top: 58vh;
-        opacity: 0.11;
-    }
-
-    .fixed-botanical.mid-right {
-        width: 85px;
-        right: -10px;
-    }
-
-    .fixed-botanical.btm-left {
-        width: 95px;
-        left: -15px;
-    }
-
-    .fixed-botanical.btm-right {
-        width: 105px;
-        right: -15px;
-    }
+    .fixed-botanical.b-12 { width: 100px; left: -15px; }
+    .fixed-botanical.b-13 { width: 75px;  left: 42%; }
+    .fixed-botanical.b-14 { width: 95px;  right: -15px; }
 
     .container {
         padding: 0 16px;
