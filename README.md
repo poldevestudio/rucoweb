@@ -22,11 +22,12 @@ A partir del kit de diseño de Instagram (`elementos.jpg`, `elementosnegros.jpg`
      - 📱 `icon-phone-direct.png` (Celular con notificaciones y mensaje WhatsApp).
      - 📖 `icon-process-steps.png` (Libreta de relevamiento y pasos ágiles).
 
-3. **Sin Botoneras Repetitivas (Diseño Limpio & Singular):**
-   - Se eliminaron las botoneras dobles o saturadas.
-   - **Hero:** Un único botón de prestigio: `✦ Solicitar Maqueta Sin Cargo →` acompañado de un enlace discreto de exploración.
-   - **Showcase:** Una sola acción clara por cliente: `Visitar Sitio Web ↗`.
-   - **Barra Móvil Flotante:** Una sola pastilla táctil en la zona del pulgar (`✦ Solicitar Maqueta Sin Cargo por WhatsApp`), ultra elegante y sin estorbar el contenido.
+3. **Sin Botoneras Repetitivas & Copys Concisos:**
+   - Se optimizaron y acortaron todos los textos de llamada a la acción para máxima conversión y lectura limpia en móviles.
+   - **Hero:** Un único botón de prestigio: `✦ Pedir Maqueta Gratis →` acompañado de un enlace discreto de exploración (`Ver Trabajos ↓`).
+   - **Showcase:** Una sola acción clara por cliente: `Ver Web en Vivo ↗` o `Pedir Maqueta ↗`.
+   - **Simulador:** `Pedir Maqueta →`.
+   - **Barra Móvil Flotante:** Una sola pastilla táctil en la zona del pulgar (`✦ Pedir Maqueta Gratis`), que sólo aparece cuando el usuario hace scroll y el botón del Hero sale de la pantalla, evitando la duplicación de botones.
 
 ---
 

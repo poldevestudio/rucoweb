@@ -56,6 +56,9 @@ html {
     scroll-behavior: smooth;
     font-size: 16px;
     -webkit-text-size-adjust: 100%;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -63,6 +66,8 @@ body {
     color: var(--ink-deep);
     font-family: var(--font-sans);
     line-height: 1.6;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     position: relative;
     -webkit-font-smoothing: antialiased;
@@ -214,6 +219,8 @@ button {
     border-radius: var(--radius-full);
     border: 1px solid rgba(22, 43, 37, 0.12);
     background: #FFFFFF;
+    white-space: nowrap;
+    flex-shrink: 0;
     transition: all 0.25s ease;
 }
 
@@ -231,15 +238,18 @@ button {
     padding: 40px 0 50px;
     background: radial-gradient(circle at 50% 10%, rgba(243, 236, 226, 0.85) 0%, var(--bg-cream) 70%);
     overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     border-bottom: var(--border-hairline);
 }
 
 .hero-botanical-left {
     position: absolute;
     top: 20px;
-    left: -30px;
-    width: 170px;
-    opacity: 0.22;
+    left: -20px;
+    width: 150px;
+    opacity: 0.18;
     pointer-events: none;
     z-index: 0;
 }
@@ -247,9 +257,9 @@ button {
 .hero-botanical-right {
     position: absolute;
     top: 40px;
-    right: -30px;
-    width: 170px;
-    opacity: 0.22;
+    right: -20px;
+    width: 150px;
+    opacity: 0.18;
     pointer-events: none;
     z-index: 0;
     transform: rotate(140deg);
@@ -418,14 +428,15 @@ button {
 /* Sticker oficial "Nuevo Reel" */
 .sticker-peel {
     position: absolute;
-    top: -18px;
-    right: -14px;
-    width: 90px;
+    top: -14px;
+    right: -4px;
+    width: 86px;
     height: auto;
     z-index: 4;
     filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.16));
     transform: rotate(8deg);
     animation: floatSticker 4s ease-in-out infinite;
+    pointer-events: none;
 }
 
 @keyframes floatSticker {
@@ -436,11 +447,11 @@ button {
 /* Acento botánico envolvente del celular */
 .phone-botanical-wrap {
     position: absolute;
-    bottom: -24px;
-    left: -32px;
-    width: 120px;
+    bottom: -18px;
+    left: -16px;
+    width: 110px;
     z-index: 1;
-    opacity: 0.45;
+    opacity: 0.40;
     pointer-events: none;
 }
 
@@ -495,41 +506,48 @@ button {
    ========================================================================== */
 .carousel-wrapper {
     position: relative;
-    max-width: 440px; /* Ancho optimizado para slides 4:5 verticales */
+    width: 100%;
+    max-width: 380px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .carousel-viewport {
+    width: 100%;
     overflow: hidden;
     border-radius: 20px;
     border: var(--border-card);
-    background: #FFFFFF;
+    background: #FAF6F0;
     box-shadow: var(--shadow-quiet);
 }
 
 .carousel-track {
     display: flex;
+    width: 100%;
     transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
     will-change: transform;
 }
 
 .carousel-slide {
+    width: 100%;
     min-width: 100%;
+    max-width: 100%;
     flex-shrink: 0;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #FAF6F0;
-    padding: 12px;
+    padding: 0;
 }
 
 .carousel-slide img {
     width: 100%;
-    max-width: 380px;
+    max-width: 100%;
     height: auto;
+    display: block;
     object-fit: contain;
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(22, 43, 37, 0.08);
+    border-radius: 20px;
 }
 
 /* Controles del Carrusel */
@@ -1013,20 +1031,20 @@ button {
 }
 
 /* ==========================================================================
-   Barra Móvil Flotante Inteligente (Aparece tras scrollear 500px)
+   Barra Móvil Flotante Inteligente (Aparece tras scrollear el Hero)
    ========================================================================== */
 .mobile-sticky-bar {
     position: fixed;
-    bottom: 16px;
+    bottom: 14px;
     left: 14px;
     right: 14px;
     z-index: 999;
-    max-width: 380px;
+    max-width: 330px;
     margin: 0 auto;
     opacity: 0;
     visibility: hidden;
     transform: translateY(16px);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
     pointer-events: none;
 }
 
@@ -1042,15 +1060,16 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 13px 20px;
+    gap: 7px;
+    padding: 12px 20px;
     background: var(--ink-deep);
     color: #FAF6F0;
-    font-size: 0.86rem;
+    font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.02em;
     border-radius: var(--radius-full);
     box-shadow: 0 8px 24px rgba(22, 43, 37, 0.28);
+    white-space: nowrap;
 }
 
 .btn-sticky-single:active {
@@ -1061,31 +1080,62 @@ button {
    Media Queries: Perfección 100% Mobile (Smartphones 320px - 768px)
    ========================================================================== */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
     .site-header {
-        height: 58px;
+        height: 56px;
     }
 
     .header-inner {
-        height: 58px;
+        height: 56px;
     }
 
     .site-header .availability-chip {
-        display: none;
+        display: none !important;
+    }
+
+    .brand-badge {
+        width: 34px;
+        height: 34px;
+    }
+
+    .brand-name {
+        font-size: 1.15rem;
+    }
+
+    .brand-tag {
+        font-size: 0.6rem;
     }
 
     .header-wa-link {
         padding: 6px 12px;
         font-size: 0.78rem;
+        white-space: nowrap;
+        gap: 4px;
     }
 
     .hero-section {
-        padding: 24px 0 36px;
+        padding: 20px 0 32px;
+    }
+
+    .hero-botanical-left {
+        width: 100px;
+        left: -10px;
+        opacity: 0.12;
+    }
+
+    .hero-botanical-right {
+        width: 100px;
+        right: -10px;
+        opacity: 0.12;
     }
 
     .hero-grid {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 28px;
+        gap: 22px;
     }
 
     .hero-content {
@@ -1094,90 +1144,107 @@ button {
 
     .hero-pill {
         margin-bottom: 10px;
-        padding: 4px 12px;
-        font-size: 0.7rem;
+        padding: 4px 11px;
+        font-size: 0.68rem;
     }
 
     .hero-title {
-        font-size: clamp(1.85rem, 6.5vw, 2.3rem);
+        font-size: clamp(1.8rem, 6.4vw, 2.2rem);
         line-height: 1.18;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
     }
 
     .hero-description {
-        font-size: 0.92rem;
+        font-size: 0.90rem;
         line-height: 1.55;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
         margin-left: auto;
         margin-right: auto;
     }
 
     .hero-action-group {
         flex-direction: column;
-        gap: 10px;
-        margin-bottom: 20px;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 18px;
     }
 
     .btn-hero-primary {
         width: 100%;
-        max-width: 320px;
+        max-width: 290px;
         justify-content: center;
-        padding: 13px 22px;
+        padding: 12px 20px;
         font-size: 0.88rem;
+        white-space: nowrap;
+    }
+
+    .link-hero-subtle {
+        font-size: 0.82rem;
+        padding: 6px 10px;
     }
 
     .hero-trust-bar {
         justify-content: center;
-        gap: 8px 14px;
+        gap: 6px 12px;
         padding-top: 14px;
     }
 
     .trust-item {
-        font-size: 0.76rem;
+        font-size: 0.75rem;
+        white-space: nowrap;
     }
 
     /* Celular mockup proporcionado y visible sin cortarse */
+    .hero-visual-wrap {
+        max-width: 250px;
+        margin: 10px auto 0;
+    }
+
     .phone-mockup {
-        width: 220px;
-        height: 380px;
-        border-radius: 32px;
-        border-width: 5px;
+        width: 210px;
+        height: 370px;
+        border-radius: 30px;
+        border-width: 4px;
     }
 
     .phone-notch {
-        width: 64px;
-        height: 14px;
+        width: 60px;
+        height: 12px;
     }
 
     .sticker-peel {
-        width: 76px;
-        top: -12px;
-        right: -10px;
+        width: 72px;
+        top: -10px;
+        right: -4px;
     }
 
     .phone-botanical-wrap {
-        width: 95px;
-        bottom: -18px;
-        left: -22px;
+        width: 90px;
+        bottom: -14px;
+        left: -12px;
+        opacity: 0.35;
     }
 
-    /* Carrusel móvil con ancho fluido */
+    /* Carrusel móvil con ancho fluido y sin cortes */
     .carousel-wrapper {
-        max-width: 330px;
+        max-width: 320px;
+        width: 100%;
     }
 
     .carousel-slide {
-        padding: 6px;
+        padding: 0;
     }
 
     .carousel-slide img {
-        max-width: 300px;
-        max-height: 380px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 18px;
     }
 
     /* Simulador de rubros: scroll horizontal táctil de pills */
     .sim-container {
-        padding: 22px 16px;
+        padding: 20px 14px;
     }
 
     .sim-tabs {
@@ -1195,33 +1262,38 @@ button {
 
     .sim-tab-btn {
         flex-shrink: 0;
-        padding: 7px 13px;
-        font-size: 0.78rem;
+        padding: 6px 12px;
+        font-size: 0.76rem;
     }
 
     .sim-result-box {
         grid-template-columns: 1fr;
-        padding: 16px;
+        padding: 15px;
         text-align: left;
     }
 
     .btn-sim-single {
         width: 100%;
         justify-content: center;
-    }
-
-    .mobile-sticky-bar {
-        display: block;
+        padding: 11px 18px;
+        font-size: 0.84rem;
+        white-space: nowrap;
     }
 
     .showcase-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 18px;
+    }
+
+    .btn-card-single {
+        padding: 10px 16px;
+        font-size: 0.82rem;
+        white-space: nowrap;
     }
 
     .pillars-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 14px;
     }
 }
 

@@ -78,6 +78,7 @@ function initCarousel() {
 
     track.addEventListener('touchstart', (e) => {
         startX = e.touches[0].clientX;
+        currentX = startX;
         isSwiping = true;
     }, { passive: true });
 
@@ -208,19 +209,47 @@ function initFAQ() {
 }
 
 /**
- * Barra Flotante Inteligente: Aparece sólo cuando el usuario scrollea después del hero
+ * Barra Flotante Inteligente: Aparece SÓLO cuando el botón del Hero sale de la pantalla
+ * Evita la duplicación de botones visibles al mismo tiempo.
  */
 function initSmartStickyBar() {
     const stickyBar = document.querySelector('.mobile-sticky-bar');
-    if (!stickyBar) return;
+    const heroBtn = document.querySelector('.btn-hero-primary');
+    if (!stickyBar || !heroBtn) return;
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 480) {
-            stickyBar.classList.add('visible');
-        } else {
+    function checkVisibility() {
+        const rect = heroBtn.getBoundingClientRect();
+        // Si el botón del Hero está por debajo del top de la ventana (visible o accesible arriba), ocultamos la barra
+        if (rect.bottom > 0) {
             stickyBar.classList.remove('visible');
+        } else {
+            // El botón del Hero ya fue scrolleado y quedó arriba fuera de vista
+            stickyBar.classList.add('visible');
         }
-    }, { passive: true });
+    }
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    stickyBar.classList.remove('visible');
+                } else {
+                    const rect = heroBtn.getBoundingClientRect();
+                    if (rect.bottom <= 0) {
+                        stickyBar.classList.add('visible');
+                    } else {
+                        stickyBar.classList.remove('visible');
+                    }
+                }
+            });
+        }, { threshold: 0.05 });
+
+        observer.observe(heroBtn);
+    }
+
+    window.addEventListener('scroll', checkVisibility, { passive: true });
+    window.addEventListener('resize', checkVisibility, { passive: true });
+    checkVisibility();
 }
 
 /**
