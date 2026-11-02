@@ -70,6 +70,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     position: relative;
+    padding-top: 64px; /* Espacio para el header fijo superior */
     -webkit-font-smoothing: antialiased;
 }
 
@@ -104,12 +105,78 @@ button {
 }
 
 /* ==========================================================================
-   Header Fijo & Minimalista
+   Capa Botánica Fija de Fondo (Watermarks Grisáceas Quiet Luxury)
+   Permanece estática de fondo mientras el usuario hace scroll
+   ========================================================================== */
+.fixed-botanical-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.fixed-botanical {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.10;
+    filter: grayscale(100%);
+    user-select: none;
+    transition: opacity 0.3s ease;
+}
+
+.fixed-botanical.top-left {
+    top: 70px;
+    left: -20px;
+    width: 170px;
+}
+
+.fixed-botanical.top-right {
+    top: 130px;
+    right: -25px;
+    width: 160px;
+    transform: rotate(135deg);
+}
+
+.fixed-botanical.mid-left {
+    top: 45vh;
+    left: -15px;
+    width: 150px;
+}
+
+.fixed-botanical.mid-right {
+    top: 55vh;
+    right: -15px;
+    width: 130px;
+}
+
+.fixed-botanical.btm-left {
+    bottom: 40px;
+    left: -20px;
+    width: 150px;
+    transform: rotate(45deg);
+}
+
+.fixed-botanical.btm-right {
+    bottom: 60px;
+    right: -20px;
+    width: 160px;
+    transform: scaleX(-1) rotate(20deg);
+}
+
+/* ==========================================================================
+   Header Fijo & Minimalista (Permanente Arriba)
    ========================================================================== */
 .site-header {
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 100;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
     background: rgba(250, 246, 240, 0.94);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -1080,6 +1147,46 @@ button {
    Media Queries: Perfección 100% Mobile (Smartphones 320px - 768px)
    ========================================================================== */
 @media (max-width: 768px) {
+    body {
+        padding-top: 56px; /* Espacio para el header fijo en celulares */
+    }
+
+    .fixed-botanical {
+        opacity: 0.07;
+    }
+
+    .fixed-botanical.top-left {
+        width: 110px;
+        left: -15px;
+        top: 65px;
+    }
+
+    .fixed-botanical.top-right {
+        width: 105px;
+        right: -15px;
+        top: 140px;
+    }
+
+    .fixed-botanical.mid-left {
+        width: 95px;
+        left: -10px;
+    }
+
+    .fixed-botanical.mid-right {
+        width: 85px;
+        right: -10px;
+    }
+
+    .fixed-botanical.btm-left {
+        width: 95px;
+        left: -15px;
+    }
+
+    .fixed-botanical.btm-right {
+        width: 105px;
+        right: -15px;
+    }
+
     .container {
         padding: 0 16px;
     }

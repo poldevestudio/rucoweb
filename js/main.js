@@ -147,7 +147,7 @@ function initSimulator() {
         }
     };
 
-    const waPhone = "5491126731952";
+    const waPhone = "5491138206873";
 
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
